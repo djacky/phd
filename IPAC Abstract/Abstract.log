@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  11 FEB 2017 16:48
 =======
 This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  11 FEB 2017 16:56
+>>>>>>> test
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  11 FEB 2017 17:02
 >>>>>>> test
 entering extended mode
  restricted \write18 enabled.
@@ -131,7 +135,11 @@ per/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-supe
 r/sfrm1728.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/
 sfti1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sf
 ti1095.pfb>
+<<<<<<< HEAD
 Output written on Abstract.pdf (2 pages, 179801 bytes).
+>>>>>>> test
+=======
+Output written on Abstract.pdf (2 pages, 180172 bytes).
 >>>>>>> test
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)

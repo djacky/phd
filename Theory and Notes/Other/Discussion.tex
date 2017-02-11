@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+%\usepackage[a4paper, total={6.5in, 8in}]{geometry}
+\usepackage{graphicx}  % Add graphics capabilities
+ \usepackage{color}
+
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{amsthm}
+\usepackage{epstopdf}
+\newtheorem{lemma}{Lemma}
+
+\title{\LARGE \bf Other Discussions}
+\begin{document}
+\maketitle
+
+\hrule
+\begin{flushright}
+Date: 26/07/2016
+\end{flushright}
+\textbf{Discussion 1: Theory for Positive Realness}
+
+I would like to investigate the necessary condition of Theorem 1 in the journal sent to ``Robust and Nonlinear Control.'' In this theorem (going from a to b), it is stated the following:
+\vspace{0.2cm} \hrule 
+
+Assume that $K = X_0Y_0^{-1}$ satisfies Statement (a) but not Statement (b). Then, according to Lemma 1, there exists a stable proper rational transfer function $F(s)$ such that
+\begin{equation}
+\Re \{ F(j\omega)[NX_0+MY_0-\gamma^{-1}|W_1MY_0|]\} > 0, \quad \forall \omega \in \Omega
+\end{equation}
+Therefore, there exists $X = X_0F$ and $Y = Y_0F$ with $K = XY^{-1} = X_0Y_0^{-1}$ such that Statement (b) holds. 
+\hrule \vspace{0.2cm}
+
+Now, there is a little concern with this proof that Michele and I have (which was spawned by the CDC review comments). First, notice that the equation above implies the following:
+\begin{equation} \label{eq:cons_2}
+\Re \{ NX+MY-\gamma^{-1}|W_1MY_0|F\} > 0, \quad \forall \omega \in \Omega
+\end{equation}
+But $F$ can be written as $F = |F|e^{j\theta_F}$. Therefore, (\ref{eq:cons_2}) can be expressed as 
+\begin{equation} \label{eq:cons_3}
+\Re \{ NX+MY-\gamma^{-1}|W_1MY|e^{j\theta_F}\}  > 0, \quad \forall \omega \in \Omega
+\end{equation}
+After rearranging, we get
+\begin{equation} \label{eq:cons_4}
+\Re \{ NX+MY\}>\gamma^{-1}|W_1MY|\cos (\theta_F) , \quad \forall \omega \in \Omega
+\end{equation}
+In other words, we only arrive to the condition in Statement (b) of the theorem if $\theta_F = 2\pi k$ for $k = 0,1,\ldots,n$, which implies that $F$ must be a positive real number. But if this is the case, then you cannot guarantee that you rotate the disk such that it lies to the right of the $j\omega$ axis. 
+
+Is there an underlying explanation that I am not seeing in the proof? Or is there something we are missing to prove the theorem properly?
+\vspace{0.2cm} \hrule 
+
+Michele and I have been looking for another solution to this problem. The control objective is to find a stabilizing controller $K$ such that
+\begin{equation} \label{eq:inf1}
+\sup_{\omega \in \Omega} |H(j\omega)| < \gamma
+\end{equation}
+where $H = W_1(1+GK)^{-1} = W_1MY\psi^{-1}$ and $\psi = NX+MY$. For our solution to the theorem, we will need to change Lemma 1 slightly. 
+\begin{lemma} 
+Suppose that $H = W_1 MY\psi^{-1}$ is a bounded analytic function in the right-half plane. Then the condition in (\ref{eq:inf1}) is satisfied if and only if there exists an angle $\theta(\omega)$ such that
+\begin{equation} \label{eq:lem_mod}
+\Re \{ e^{-j\theta(\omega)}\psi - \gamma^{-1}|W_1MY|\}>0 , \quad \forall \omega \in \Omega
+\end{equation}
+where $\psi = NX+MY$.
+\end{lemma}
+
+
+\textit{Proof:}
+The condition in (\ref{eq:inf1}) implies that there is a circle centered at $\psi$ with a radius of $\gamma^{-1}|W_1MY|$ (that does not include the origin). At every frequency, there is a function $f(j\omega)$ that can rotate the point $\psi$ such that it lays on the right hand side of the $j\omega$ axis. Hence we have
+\begin{equation}
+\Re \{ f(j\omega)\psi\}>\gamma^{-1}|W_1MY|\geq 0, \quad \forall \omega \in \Omega
+\end{equation}
+$f(j\omega)$ can be approximated arbitrarily well by the frequency response of a rational stable transfer function $F(s)$ if and only if $\psi^{-1}$ is analytic in the RHP, which is the case because of the stability of $H$. Therefore, $F(s) = e^{-s\theta(\omega)/\omega}$ can be selected for such a function since
+\begin{equation} \label{eq:pade}
+e^{-s\theta(\omega)/\omega} \approx \frac{\sum_{i=0}^n \binom ni \frac{(2n-i)!}{(2n)!} \left(-\frac{s\theta(\omega)}{\omega}\right)^i}{\sum_{i=0}^n \binom ni \frac{(2n-i)!}{(2n)!} \left(\frac{s\theta(\omega)}{\omega}\right)^i}
+\end{equation}
+where $\theta(\omega) > 0$.  Note that (\ref{eq:pade}) represents the Pad\'{e} approximant and is stable for any $n$. As $n \to \infty$, the Pad\'{e} approximant converges to the original function. The frequency response of this function is given by $F(j\omega) = e^{-j\theta(\omega)}$. Therefore, the condition in (\ref{eq:lem_mod}) can be expressed as follows:
+\begin{equation} \label{eq:cos_cons}
+\cos (\theta_\psi - \theta(\omega)) > \frac{\gamma^{-1}|W_1MY|}{|\psi|}, \quad \forall \omega \in \Omega
+\end{equation} 
+where $\theta_\psi$ is the phase angle associated with $\psi$. However, based on (\ref{eq:inf1}), we know that the right-hand side of the above constraint is less than one (since (\ref{eq:inf1}) implies that $|\psi| > \gamma^{-1}|W_1MY|$). Therefore, there will always exists a $\theta(\omega)$ such that (\ref{eq:cos_cons}) is satisfied. 
+{\hfill \ensuremath{\blacksquare}}
+
+
+
+Based on this modified lemma, we have proposed the following necessary condition for the theorem:
+\vspace{0.2cm} \hrule 
+
+Assume that $K = X_0Y_0^{-1}$ satisfies Statement (a) but not Statement (b). Then, according to (modified) Lemma 1, there exists a function $F(j\omega) = e^{-j\theta(\omega)}$ such that
+\begin{equation}
+\Re \{ e^{-j\theta(\omega)}\psi_0-\gamma^{-1}|W_1MY_0|\} > 0, \quad \forall \omega \in \Omega
+\end{equation}
+where $\psi_0 = NX_0 + MY_0$. Therefore, there exists $X = X_0e^{-j\theta(\omega)}$ and $Y = Y_0e^{-j\theta(\omega)}$ with $|Y| = |Y_0|$ and with $K = XY^{-1} = X_0Y_0^{-1}$ such that Statement (b) holds. 
+\hrule \vspace{0.2cm}
+
+Geometrically, what we have done is rotate only the point $\psi$ and keep the radius constant through the rotation. Of course, simply rotating the point $\psi$ will not satisfy (\ref{eq:inf1}) (because the point $\psi - \gamma^{-1}|W_1MY|$ may still lie to the left of the $j\omega$ axis); but in the Lemma, we showed that there exists an angle $\theta(\omega)$ such that the disk lays completely on the right-hand side of the $j\omega$ axis, and thus satisfying (\ref{eq:inf1}). 
+
+{\bf Comments by AK:} Thank you for your work and comment of the reviewer for mentioning this problem in the paper. Unfortunately, we cannot change anymore the journal paper. So, I tried to modify just the Lemma slightly and keep the theorem unchanged. The main problem in Lemma one was the fact that the disk was represented just by one point (you mentioned this problem one time, I believe). The idea is to represent the disk by the whole circle as it should be. The new Lemma will be like that:
+
+\begin{lemma}   \label{lem2}
+Suppose that $H(j\omega)={W_1MY} (NX+MY)^{-1}$ is the frequency response of a bounded analytic function in the right half plane. Then, the following constraint is met
+\begin{equation} \label{eq4}
+\sup_{\omega \in \Omega}  |H(j\omega )| < \gamma
+\end{equation}
+if and only if there exists a stable proper rational transfer function $F(s)$ that satisfies
+$$
+\Re\{(NX + MY)F(j\omega)\}>\gamma ^{-1}|W_1MYF|,  \qquad \forall \omega \in \Omega 
+$$
+\end{lemma}
+
+{\it Proof :} 
+The basic idea is similar to that of  the proof of Theorem~1 in \cite{RM94}. It is clear that (\ref{eq4}) is satisfied if and only if the disk of radius $ \gamma ^{-1}|W_1MY|$ centered at $NX+MY$ does not include the origin for all $\omega \in \Omega$, i.e. $|NX+MY|>\gamma ^{-1}|W_1MY|$. This is equivalent to the existence of a line passing through origin that does not intersect the disk. Therefore, at every given frequency, $\omega$, there exists a complex number $f(j\omega)$ that can rotate the disk such that it lays inside the right hand side of the imaginary axis. Hence, we have 
+\begin{equation}
+\label{eq18}
+\Re\{ (NX + MY - \gamma ^{-1}|W_1MY|e^{j\theta})f(j\omega)\}>0
+\end{equation}
+for all $\omega \in \Omega$ and for all $\theta \in [0 \, , \, 2 \pi [$. The above condition is satisfied if and only if:
+\begin{equation}
+\label{eq18}
+\Re\{ (NX + MY)f(j\omega) \} > \gamma ^{-1}|W_1MYf(j\omega)| \qquad \forall \omega \in \Omega 
+\end{equation}
+In \cite{RM94}, it is shown that, $f(j\omega)$ can be approximated arbitrarily well by the frequency response of a rational stable transfer function $F(s)$ if and only if 
+\begin{equation}
+Z=(NX + MY - \gamma_0 ^{-1}|W_1MY|e^{j\theta})^{-1}
+\end{equation}
+is analytic in the right half plane for all $\gamma_0>\gamma$ and all $\theta \in [0 \, , \, 2 \pi [$. However, $(NX + MY )^{-1}$ is stable because of the stability of $H$. On the other hand, by decreasing $\gamma_0$ from infinity to $\gamma$, the poles of $Z$ move continuously with $\gamma_0$. Therefore, $Z$ is not analytic in the right half plane if and only if $Z^{-1}(j\omega)=0$ for a given frequency, which is not the case because the origin is not in the interior of the circle  $\gamma_0 ^{-1}|W_1MY|e^{j\theta}$.  
+{\hfill \ensuremath{\blacksquare}}
+
+{\bf Comments by AN:} 
+Actually, I realized that the Lemma you present is exactly the same as the one I presented. Since $F = |F|e^{j\theta_F}$, then 
+\begin{equation}
+\Re\{(NX + MY)F - \gamma ^{-1}|W_1MYF| \}>0
+\end{equation}
+can be expressed as
+\begin{equation}
+\Re\{|F| \left[ (NX + MY)e^{j\theta_F} - \gamma ^{-1}|W_1MY| \right] \}>0
+\end{equation}
+But you can factor $|F|$ out of the real part of the argument, since it is real. So you can write the above constraint as
+\begin{equation}
+\Re\{ (NX + MY)e^{j\theta_F} - \gamma ^{-1}|W_1MY| \}>0
+\end{equation}
+This is exactly the condition I derived in (\ref{eq:lem_mod}). So in essence, we are simply rotating the point $NX+MY$ such that the entire disk lies in the right-hand side of the $j\omega$ axis.
+
+
+
+\end{document}
+

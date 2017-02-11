@@ -1,0 +1,69 @@
+%% Creator: Inkscape 0.91_64bit, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'pc_drawing_ident2.eps' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{515.10425198bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.21387792)%
+    \put(0,0){\includegraphics[width=\unitlength]{pc_drawing_ident2.eps}}%
+    \put(0.10828169,0.15935156){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\LARGE $RST$}}}%
+    \put(0.43128354,0.16344113){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\large DAC}}}%
+    \put(0.59424083,0.16217825){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\Large $V_s$}}}%
+    \put(0.74310225,0.16056419){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\large Load}}}%
+    \put(0.39825644,0.0835063){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \put(0.56405514,0.03950071){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\large ADC}}}%
+    \put(0.86477627,0.18520745){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\Large $i_D$}}}%
+    \put(0.01249043,0.18367886){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\Large $i_R$}}}%
+    \put(0.3942596,0.11674562){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \put(0.28130978,0.12524585){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{}}}%
+    \put(0.66448402,0.08245363){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\large ALPF}}}%
+    \put(0.42685597,0.08214584){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\large DLPF}}}%
+    \put(0.75602449,0.09015502){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\large Transducer}}}%
+    \put(0.3081764,0.03739015){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{COMM}}}%
+    \put(0.30818745,0.16299084){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{COMM}}}%
+  \end{picture}%
+\endgroup%

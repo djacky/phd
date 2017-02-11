@@ -1,0 +1,154 @@
+\documentclass[12pt]{article}
+\bibliographystyle{IEEEtran}
+%\usepackage[a4paper, total={6.5in, 8in}]{geometry}
+\usepackage{graphicx}  % Add graphics capabilities
+ \usepackage{color}
+
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{amsthm}
+\usepackage{epstopdf}
+
+\title{\LARGE \bf Discussion of $H_2$ Control Problem}
+\begin{document}
+\maketitle
+
+\hrule
+\begin{flushright}
+Date: 13/04/2016 \\
+Written by: Achille Nicoletti
+\end{flushright}
+\textbf{Discussion 1: Defining the optimality for the $H_2$ problem}
+
+You define the $H_2^2$ optimization problem (in page 3 of your note) to be the following:
+
+\begin{equation} \label{eq:opt_prob_1}
+\begin{aligned}
+& \underset{ \{X,Y,\gamma\}}{\text{minimize}}
+& & \sum_{k=1}^Q \gamma (\omega_k)  \\
+& \text{subject to:} & & |W_1MY(\omega_k)|^2 < \gamma(\omega_k) |NX(\omega_k)+MY(\omega_k)|^2  \\ 
+& & & k = 1,\ldots,N
+\end{aligned}
+\end{equation}
+
+Suppose that there exist optimal controllers $X_0$, $Y_0 \in \bf{RH_{\infty}}$ which satisfy the $H_2^2$ control problem. Then is it correct to state that the optimal solution $\gamma_0(\omega)$ is
+
+\begin{equation}
+\gamma_0(\omega) =  \left\lvert\frac{W_1MY_0(\omega)}{NX_0(\omega) + MY_0(\omega)} \right\rvert ^2
+\end{equation}
+
+{\bf Answer by AK:} Yes
+
+{\bf Answer by AN:} 
+
+In this case, I think that the proof for convergence is very similar to the one you presented in the journal paper sent to International Journal of Robust and Nonlinear Control (for the $H_\infty$ criterion). 
+
+Let $X_n^*$ and $Y_n^*$ be the projections of $X_0$ and $Y_0$ into the subspace spanned by an $n$ dimensional orthogonal basis functions and define $\gamma_n^*$ as:
+\begin{equation}
+\gamma_n^*(\omega) =  \left\lvert\frac{W_1MY_n^*(\omega)}{NX_n^*(\omega) + MY_n^*(\omega)} \right\rvert ^2
+\end{equation}
+Assume that $\gamma_n^*(\omega)$ is bounded and that $NX_n^* + MY_n^*$ has no zeros on the imaginary axis (which you proved in the journal paper). Since $\gamma_0(\omega_k) > 0$ and $\gamma_n^*(\omega_k) > 0$ for every $k$, then it is convenient to investigate the convergence of $|\sqrt{\gamma_n^*(\omega_k)} - \sqrt{\gamma_0(\omega_k)}|$ instead of $|\gamma_n^*(\omega_k) - \gamma_0(\omega_k)|$ as $n \rightarrow \infty$. By using the reverse triangle inequality, we will have the following condition:
+
+\begin{equation} \label{eq:gamma_bound}
+\begin{aligned}
+\left\lvert \sqrt{\gamma_n^*(\omega_k)} - \sqrt{\gamma_0(\omega_k)} \right\rvert  &\leq  \left\lvert  \frac{W_1MY_n^*(\omega_k)}{NX_n^*(\omega_k) + MY_n^*(\omega_k)} - \frac{W_1MY_0(\omega_k)}{NX_0(\omega_k) + MY_0(\omega_k)}   \right\rvert \\  &\leq \left\lvert  \frac{W_1MN[X_n^*(Y_0-Y_n^*)(\omega_k) - Y_n^*(X_0-X_n^*)(\omega_k)]}{[NX_n^*(\omega_k) + MY_n^*(\omega_k)][NX_0(\omega_k)+MY_0(\omega_k)]} \right\rvert \\ & \hspace{6.3cm} \mbox{for } k=1,\ldots,Q
+ \end{aligned}
+\end{equation}
+
+$X_n^*$ and $Y_n^*$ are the projections of $X_0$ and $Y_0$, respectively, into the subspace spanned by orthogonal basis functions; therefore, according to \cite{AN99b},
+\begin{equation} 
+\begin{aligned}
+\lim_{n \to \infty} \|X_0 - X_n^* \|_p &=0\\
+\lim_{n \to \infty} \|Y_0 - Y_n^* \|_p &=0
+ \end{aligned}
+\end{equation}
+where $p \in (1,\infty)$. Therefore, since the frequency functions in (\ref{eq:gamma_bound}) are bounded for every $k$, and the denominator has no zero on the imaginary axis, then
+\begin{equation} 
+\begin{aligned}
+\lim_{n \to \infty} \left\lvert \sqrt{\gamma_n^*(\omega_k)} - \sqrt{\gamma_0(\omega_k)} \right\rvert =0 \Longleftrightarrow \lim_{n \to \infty} \sqrt{\gamma_n^*(\omega_k)} = \sqrt{\gamma_0(\omega_k)} \\
+\mbox{for } k = 1,\ldots,Q
+ \end{aligned}
+\end{equation}
+Since $\sqrt{\gamma_n^*(\omega_k)}$ is a convergent sequence, then so is $\gamma_n^*(\omega_k)$; therefore, it is evident that
+\begin{equation} 
+\begin{aligned}
+\lim_{n \to \infty} \gamma_n^*(\omega_k) =   \lim_{n \to \infty}  \left[ \sqrt{\gamma_n^*(\omega_k)}\right] ^2 = \left[ \lim_{n \to \infty}  \sqrt{\gamma_n^*(\omega_k)}\right] ^2 = \left[ \sqrt{\gamma_0(\omega_k)}\right] ^2 = \gamma_0(\omega_k)\\
+\mbox{for } k = 1,\ldots,Q
+ \end{aligned}
+\end{equation}
+The above condition shows that as $n \rightarrow \infty$, the solution obtained with projections $X_n^*$ and $Y_n^*$ converges to the optimal solution. 
+
+{\bf Answer by AK:} The problem is that the optimization in (1) is not convex, while for the $H_\infty$ case we could make the optimization quasi-convex and solve it by bisection algorithm. In fact we should have two properties: first the convexity of the optimization problem and second the convergence to the optimal solution by increasing the order. What you did was to show the convergence for a non convex problem. This result is not useful because in a non-convex optimization you cannot show that the local optimal solution is monotonically non-increasing.
+
+\hrule
+\begin{flushright}
+Date: 21/04/2016 \\
+Written by: Achille Nicoletti
+\end{flushright}
+\textbf{Discussion 2: Proving the optimality for the $H_\infty$ problem}
+
+So now we must re-prove the theorem for converging to the optimal solution for the $H_\infty$ case. I have one mathematical question I would like to pose. Suppose we have 2 real numbers $x$ and $y$. Then we know that
+\begin{equation}
+|x - y| =0 \ \mbox{if and only if } x = y
+\end{equation}
+Now suppose that $X_0$ is an optimal controller for the $H_\infty$ problem and that $X_n$ is the controller with an $n$-dimensional orthogonal basis function (for the convex problem). Then we know that
+\begin{equation} \label{eq:converge_cond}
+\lim_{n \to \infty} \|X_0 - X_n \|_p =0
+\end{equation}
+where $p \in (1,\infty)$. Can the above equation be equivalently stated as
+\begin{equation}
+\lim_{n \to \infty} \|X_0 - X_n \|_p =0 \ \mbox{if and only if } X_0 = X_{n \to \infty}  
+\end{equation}
+
+{\bf Answer by AK:} $X_0$ cannot be equal to $X_n$ because they do not have the same structure.
+
+{\bf Answer by AN:} Ah yes, sorry I forgot to put the norm in the statement:
+\begin{equation}
+\lim_{n \to \infty} \|X_0 - X_n \|_p =0 \ \mbox{if and only if } \|X_0\|_p = \|X_{n \to \infty}\|_p  
+\end{equation}
+$X_0$ and $X_n$ in (\ref{eq:converge_cond}) are both functions of $\omega$, right? So is structure important? I believe that in \cite{AN99b}, they prove this convergence based on the  Fourier series of the basis functions.
+
+{\bf Answer by AK:} The left hand side is much stronger. You may have $\|X_0\|_p = \|X_{n \to \infty}\|_p$ while  $X_0$ and $X_n$  are completely different. In other words $\|X_0\|_p = \|X_{n \to \infty}\|_p$ is a sufficient condition for $\lim_{n \to \infty} \|X_0 - X_n \|_p =0$ but it is not necessary.
+
+
+{\bf Answer by AN:} Here is the analysis I performed for proving the convergence for the $H_\infty$ problem. The optimal solution for the true $H_\infty$ optimization problem is 
+\begin{equation}
+\gamma_0 = \sup_{\omega \in \Omega} \left \lvert \frac{W_1MY_0}{ NX_0 + MY_0} \right \rvert
+\end{equation}
+Now define 
+\begin{equation} \label{convexopt}
+\gamma_n^* = \sup_{\omega \in \Omega} \left \lvert \frac{W_1MY_n^*}{\Re\{ NX_n^* + MY_n^*\}} \right \rvert
+\end{equation}
+where $X_n^*$ and $Y_n^*$ are the projections of $X_0$ and $Y_0$ into the subspace spanned by an n dimensional orthogonal basis function. We assume that $\gamma_n^*$ is bounded (i.e., $NX_n^* + MY_n^*$ has no zero on the imaginary axis, which you have already proved in the journal paper). By using the fact that for two real functions $f$ and $g$, $\sup (f) - \sup (g) \leq \sup(f-g)$, we get the following condition:
+
+\begin{equation} \label{eq:H_inf_ineq}
+\begin{aligned}
+\gamma_0-\gamma_n^*  =& \sup_{\omega \in \Omega} \left \lvert \frac{W_1MY_0}{ NX_0 + MY_0} \right \rvert  - \sup_{\omega \in \Omega} \left \lvert \frac{W_1MY_n^*}{\Re\{ NX_n^* + MY_n^*\}} \right \rvert  \\
+\leq & \sup_{\omega \in \Omega} \left[ \left \lvert \frac{W_1MY_0}{ NX_0 + MY_0} \right \rvert  - \left \lvert \frac{W_1MY_n^*}{\Re\{ NX_n^* + MY_n^*\}} \right \rvert \right] \\
+ =&   \sup_{\omega \in \Omega} \left[ \frac{|W_1MY_0 \Re\{ NX_n^*+MY_n^*\}| - |W_1MY_n^*(NX_0+MY_0)| }{|F|} \right] \\
+ \leq & \sup_{\omega \in \Omega} \left[ \frac{|W_1MY_0 (NX_n^*+MY_n^*)| - |W_1MY_n^*(NX_0+MY_0)| }{|F|} \right]  \\
+  \leq & \sup_{\omega \in \Omega} \left \lvert \frac{W_1MY_0 (NX_n^*+MY_n^*) - W_1MY_n^*(NX_0+MY_0) }{F} \right \rvert \\
+  = & \sup_{\omega \in \Omega} \left \lvert \frac{W_1MNX_n^*(Y_0-Y_n^*) - W_1MNY_n^*(X_0-X_n^*) }{F} \right \rvert 
+\end{aligned}
+\end{equation}
+where $F = (NX_0+MY_0) \Re\{ NX_n^*+MY_n^*\}$. But according to \cite{AN99b},
+\begin{equation} 
+\begin{aligned}
+\lim_{n \to \infty} \|X_0 - X_n^* \|_p &=0\\
+\lim_{n \to \infty} \|Y_0 - Y_n^* \|_p &=0
+ \end{aligned}
+\end{equation}
+where $p \in (1,\infty)$. Therefore, since (\ref{eq:H_inf_ineq}) is bounded, and the denominator has no zero in the imaginary axis,
+\begin{equation}
+\lim_{n\to\infty} \gamma_n^* = \gamma_0
+\end{equation} 
+On the other hand, $\gamma_n$ (i.e., the solution to the convex optimization problem) is always less than or equal to $\gamma_n^*$ and greater than the optimal solution $\gamma_0$. Thus $\gamma_n$ converges from above to $\gamma_0$ and this convergence is monotonic because the basis functions of order $n$ are a subset of those of order $n + 1$, which ensures that $\gamma_{n+1} \leq \gamma_n$.
+
+{\bf Answer by AK:} It's nice but it is not clear if $X_n$ and $Y_n$ are the projection of $X_0$ and $Y_0$ or they are the solutions of the convexified optimization problem in (\ref{convexopt}). In the paper we use two different notation for that leading to $X^*_n$ and $Y_n^*$. If you suppose that these are the same you should prove it. 
+
+{\bf Answer by AN:} Yes, I should have made it more clear. I modified the solution (see above).  
+
+{\bf Answer by AK:} It's now perfect.
+\bibliography{linear2}
+\end{document}
+

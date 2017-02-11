@@ -1,0 +1,158 @@
+\documentclass[12pt]{article}
+\bibliographystyle{IEEEtran}
+%\usepackage[a4paper, total={6.5in, 8in}]{geometry}
+\usepackage{graphicx}  % Add graphics capabilities
+ \usepackage{color}
+
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{amsthm}
+\usepackage{epstopdf}
+\newtheorem{theorem}{Theorem}
+
+\title{\LARGE \bf Discussion of Nonlinear Control Problem}
+\begin{document}
+\maketitle
+
+\hrule
+\begin{flushright}
+Date: 9/05/2016
+\end{flushright}
+\textbf{Discussion 1: Using describing function as an uncertainty}
+
+Suppose that the nominal plant transfer function is $G$ with the perturbed transfer function of the form $\hat{G} = G(1+\Delta W_2)$ ($W_2$ is fixed, stable transfer function). If $\| \Delta\|_{\infty}<1$, then as described in \cite{DFT92}, $W_2$ can be chosen such that
+\begin{equation} \label{eq:uncertain_profile}
+\left \lvert \frac{\hat{G}(j\omega)}{G(j\omega)} - 1 \right \rvert \leq |W_2(j\omega)|, \quad \forall \omega
+\end{equation}
+so that $W_2(j\omega)$ provides the uncertainty profile. 
+
+Let us consider the saturation describing function (with a slope of $1$) given as follows:
+\begin{equation}
+N(A) = 
+\begin{cases}
+1, & \text{if }A \leq \delta \vspace{0.6em}\\
+\frac{2}{\pi}\left[\sin^{-1}\frac{\delta }{A} + \frac{\delta }{A}\sqrt{1-\left(\frac{\delta }{A}\right)^2}\right], & \text{if }A>\delta 
+\end{cases}
+\end{equation}
+where $A$ is the amplitude of the sine signal that enters the saturation, $\delta $ is the value at which saturation occurs. Notice that $N(A)\in [0,1]$; this means that $N(A)$ can be modeled as an uncertainty. If the saturation block is in series with the plant (as is usually the case), then the perturbed model can be described as $\hat{G} = GN(A)$, where $G$ is the nominal model. In other words, $N(A)$ can be treated as a multiplicative perturbation of the nominal plant. By using the condition in (\ref{eq:uncertain_profile}), we will get the following constraint:
+\begin{equation}
+|N(A)-1|\leq |W_2(j\omega)|, \quad \forall \omega
+\end{equation}
+However, since $N(A) \in [0,1]$, then we can consider $W_2(j\omega) \geq 1$ for all $\omega$. Therefore, to reduce the conservatism, we can simply choose $W_2(j\omega) = 1$. 
+
+\vspace{1cm}
+\textbf{Discussion 2: Stability using circle criterion}
+
+I will now be deriving the conditions to achieve stability given a time-variant memoryless nonlinearity (in the frequency domain). As we had already spoken about, I will use the the circle criterion for this. 
+
+Suppose we have a closed-loop system with a nonlinearity $\Phi$, a plant $G(s)$ and controller $C(s)$, as depicted in Fig.~\ref{fig:nl_block}. 
+\begin{figure}
+\centering
+\resizebox{1\columnwidth}{!}{\input{nl_block.pdf_tex}}
+\caption{Block diagram with nonlinear component.}
+%\label{fig:pc}
+\label{fig:nl_block}
+\end{figure}
+
+The type of nonlinearity that will be addressed here is of the sector type. The sector condition can be expressed as follows:
+\begin{equation} \label{eq:sector_cond}
+k_1 u \leq \Phi(t,u) \leq k_2 u, \quad \forall t \geq 0, \forall u \in [a,b] 
+\end{equation}
+where $k_1, k_2, a$ and $b$ are constants (with $k_2 > k_1$ and $a < 0 < b$). This condition can be interpreted as a nonlinearity which is bounded by two straight lines with slopes $k_1$ and $k_2$ that pass through the origin. Fig.~\ref{fig:nl_graph} depicts this sector nonlinearity when (\ref{eq:sector_cond}) holds globally.  
+\begin{figure}
+\centering
+\resizebox{1\columnwidth}{!}{\input{nl_graph.pdf_tex}}
+\caption{Nonlinear sector}
+%\label{fig:pc}
+\label{fig:nl_graph}
+\end{figure}
+
+In order to analyze the stability, let us consider the autonomous form of the block diagram in Fig.~\ref{fig:nl_block}, which is shown in Fig.~\ref{fig:nl_block_reform}. 
+\begin{figure}
+\centering
+\resizebox{1\columnwidth}{!}{\input{nl_block_reform.pdf_tex}}
+\caption{Equivalent block diagram in autonomous form}
+%\label{fig:pc}
+\label{fig:nl_block_reform}
+\end{figure}
+Let us define the open-loop system as $L(s) = C(s)G(s)$. The circle criterion states that given the sector nonlinearity in (\ref{eq:sector_cond}), then the closed-loop system is globally asymptotically stable at the origin if $L(j\omega)$ satisfies the Nyquist criterion and 
+\begin{equation} \label{eq:sector_stability_cond}
+\Re \left[  \frac{1+k_2L(j\omega)}{1+k_1L(j\omega)} \right] > 0, \quad \forall \omega
+\end{equation}
+For $L(j\omega)$ to satisfy the Nyquist criterion, it must encircle the point $-1/k_1 + j0$ $m$ times in the counterclockwise direction, where $m$ is the number poles of $L(s)$ in the RHP.  Let us first consider the case when $0< k_1 < k_2$; then the condition in (\ref{eq:sector_stability_cond}) can be interpreted as a disk $D(k_1,k_2)$ in the complex plane that is centered at $k = (k_1+k_2)(2k_1k_2)^{-1}$ with radius $r_k = k - 1/k_2$ that does not include or intersect with $L(j\omega)$. In other words, the Nyquist plot of $L(j\omega)$ must be strictly outside the disk $D(k_1,k_2)$. Fig.~\ref{fig:complex_circ} displays a graphical interpretation of this condition. 
+\begin{figure}
+\centering
+\resizebox{1\columnwidth}{!}{\input{popov_circ.pdf_tex}}
+\caption{Absolute stability condition for sector nonlinearity in (\ref{eq:sector_cond}) (for $0 < k_1 < k_2$)}
+%\label{fig:pc}
+\label{fig:complex_circ}
+\end{figure}
+
+\textbf{Definition 1:} \textit{Consider an open-loop system $L(s)$ with $\Phi(\cdot,\cdot)$ that satisfies the sector condition in (\ref{eq:sector_cond}) globally. Then the system is absolutely stable for $0 < k_1 < k_2 $ if the Nyquist plot of $L(j\omega)$ does not enter the disk $D(k_1,k_2)$ and encircles it $m$ times in the counterclockwise direction, where m is the number of poles of $L(s)$ with positive real parts.}
+
+This condition can be expressed as follows:
+\begin{equation} \label{eq:stab_ineq_1}
+\sup_\omega \left\lvert \frac{r_k}{k+L(j\omega)} \right\lvert < 1
+\end{equation}
+This inequality will ensure that the Nyquist plot of $L(j\omega)$ will never intersect the disk $D(k_1,k_2)$. Notice that this condition looks similar to the $H_\infty$ norm of the weighted sensitivity function (i.e., when the weight $W = r_k$ and $k = 1$). 
+
+\begin{theorem}
+Suppose that $C(s)$ is linearly parameterized. A convex constraint which ensures the absolute stability of the autonomous system with the sector nonlinearity in (\ref{eq:sector_cond}) can be asserted as follows:
+\begin{equation} \label{eq:the_cons}
+r_k|k+L_d(j\omega)|  -  \Re \{[k+L_d(-j\omega)][k+L(j\omega)]\} < 0, \quad \forall \omega
+\end{equation}
+where $L_d(j\omega)$ is the FRF of the desired open-loop transfer function.
+\end{theorem}
+
+
+
+{\it Proof :}\\
+We know that
+\begin{equation}
+\Re \{[k+L_d(-j\omega)][k+L(j\omega)]\} \leq |[k+L_d(-j\omega)][k+L(j\omega)]|
+\end{equation}
+Therefore, noting that $|k+L_d(-j\omega)| = |k+L_d(j\omega)|$, we can conclude the following:
+\begin{equation}
+r_k -  |k+L(j\omega)| < 0, \quad \forall \omega
+\end{equation}
+which leads directly to (\ref{eq:stab_ineq_1}). To ensure stability, we must show that the Nyquist criterion is met for $L(j\omega)$. Notice that (\ref{eq:the_cons}) implies that
+\begin{equation}
+\Re \{[k+L_d(-j\omega)][k+L(j\omega)]\} > 0
+\end{equation}
+which in turn implies the following:
+\begin{equation}
+\mbox{wno} \{[k+L_d(-j\omega)][k+L(j\omega)]\} = 0
+\end{equation}
+where ``wno'' stands for the winding number of the Nyquist plot around the origin. Therefore, we can conclude that 
+\begin{equation}
+\mbox{wno} [k+L_d(j\omega)] = \mbox{wno} [k+L(j\omega)] 
+\end{equation}
+Thus if $L_d$ meets the Nyquist stability requirement, then so will $L$.
+ {\hfill \ensuremath{\blacksquare}}
+
+\vspace{1cm}
+\textbf{$H_\infty$ Performance for Sector Nonlinearity}
+
+The constraint in Theorem 1 guarantees that the system is globally asymptotically stable at the origin for the sector nonlinearity. We will now investigate how we can achieve $H_\infty$ performance with the sector nonlinearity. In one of the papers with Gorka, you derived a sufficient condition to guarantee $H_\infty$ performance by loop-shaping $L(j\omega)$ around a desired $L_d$:
+\begin{equation} \label{eq:h_inf_cond}
+\gamma^{-1}|W_1(j\omega)(1+L_d(j\omega))|  -  \Re \{[1+L_d(-j\omega)][1+L(j\omega)]\} < 0, \quad \forall \omega
+\end{equation}
+where $\gamma$ is minimized. Let us replace the nonlinearity $\Phi(\cdot)$ in Fig.~\ref{fig:nl_block} with a simple gain $Q > 0$. We can define the modified plant as $G_2 = QG$. The output can then be expressed as $x = Qu$, which is a line in the $u-x$ plane in Fig.~\ref{fig:nl_graph} that passes through the origin and has slope $Q$. Notice that (\ref{eq:h_inf_cond}) is convex in $Q$. Therefore, if (\ref{eq:h_inf_cond}) is satisfied for $Q = k_1$ AND $Q = k_2$, and because it is convex in $Q$, then (\ref{eq:h_inf_cond}) will be satisfied for all $Q \in [k_1,k_2]$. If this is the case, then $H_\infty$ performance is guaranteed for the nonlinearity sector defined in (\ref{eq:sector_cond}) because the performance is ensured for all slopes between $k_1$ and $k_2$. In other words, you can always select a slope $Q \in [k_1,k_2]$ such that it intersects with the sector nonlinearity in (\ref{eq:sector_cond}). Therefore, one can impose the following optimization problem to guarantee the performance for the nonlinear sector in (\ref{eq:sector_cond}):
+\begin{equation}  \label{eq-14}
+\begin{aligned}
+& \underset{ \{C,\gamma\}}{\text{minimize}}
+& & \gamma  \\
+& \text{subject to:} & & \gamma^{-1}|W_1(j\omega)(1+L_d(j\omega))|  -  \Re \{[1+L_d(-j\omega)][1+QL(j\omega)]\} < 0  \\ 
+& & & Q \in \{ k_1,k_2\} \\
+& & & \forall \omega
+\end{aligned}
+\end{equation}
+
+{\bf Comments by AK for the second discussion:} 
+\begin{itemize}
+	\item Although the stability constraint in Theorem 1 seems to be fine the performance constraint in (\ref{eq-14}) is unlikely valid for time-varying sector non-linearilty. It should be fine with time-invariant sector non-linearity. 
+	\item The condition in Theorem 1 is a sufficient condition. You could develop a necessary and sufficient condition using your formulation instead of that of Gorka.
+\end{itemize}
+
+\bibliography{linear2}
+\end{document}

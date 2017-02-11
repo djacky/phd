@@ -1,0 +1,64 @@
+%% Creator: Inkscape 0.48.5, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'identification.ps' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{504.225bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.33832106)%
+    \put(0,0){\includegraphics[width=\unitlength]{identification.ps}}%
+    \put(0.23227882,0.20971279){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\large Power}}}%
+    \put(0.44786389,0.19541529){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\large Load}}}%
+    \put(0.62219427,0.19414991){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\large LPF}}}%
+    \put(0.86791601,0.19414991){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\large LPF}}}%
+    \put(0.74611089,0.19414991){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\large ADC}}}%
+    \put(0.06812602,0.19414991){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\large DAC}}}%
+    \put(0.49288401,0.02867101){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\large RST}}}%
+    \put(0.29792773,0.32446006){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\Large Identified process}}}%
+    \put(0.35374726,0.29064917){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\Large $(G^{\star})$}}}%
+    \put(0.21205886,0.18312934){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\large Converter}}}%
+  \end{picture}%
+\endgroup%

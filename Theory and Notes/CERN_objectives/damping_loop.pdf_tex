@@ -1,0 +1,65 @@
+%% Creator: Inkscape 0.91_64bit, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'damping_loop.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{445.05478539bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.4126232)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{damping_loop.pdf}}%
+    \put(0.26934033,0.3197852){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{-}}}%
+    \put(0.39286555,0.32041381){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{-}}}%
+    \put(0.34771422,0.35376798){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{+}}}%
+    \put(0.22514902,0.35467587){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{+}}}%
+    \put(0.57930434,0.33843477){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$G(s)$}}}%
+    \put(0.6621192,0.20297789){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$H(s)$}}}%
+    \put(0.50162528,0.20426186){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$k_i$}}}%
+    \put(0.59363072,0.04443126){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$k_u$}}}%
+    \put(0.08775398,0.33845605){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$1+k_u$}}}%
+    \put(0.01179799,0.3609039){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$r$}}}%
+    \put(0.92597119,0.36218783){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{$y$}}}%
+  \end{picture}%
+\endgroup%

@@ -1,0 +1,38 @@
+\documentclass[11pt,english]{article}
+\usepackage[T1]{fontenc}
+\usepackage{babel}
+\bibliographystyle{IEEEtran}
+
+\author{
+  Achille Nicoletti and Michele Martino\\ \\
+  \textit{\small The European Organization for Nuclear Research (CERN)} \\
+  \textit{\small Technology Department, Electrical Power Converters group,} \\
+  \textit{\small High Precision Measurements section}
+}
+
+\title{Data-driven Controller Design for a Fast-Pulsed Power Converter Control Application}
+\date{}
+
+\begin{document}
+  \maketitle
+  
+  \begin{center}
+  \LARGE{\bf{Abstract}}
+  \end{center}
+ 
+The complex structures of today's systems create challenging tasks for the control engineer in designing a viable controller. In order to simplify the controller design process, these systems are approximated with low-order models; this reduces both time and effort in synthesizing a controller. However, this approximation can create stability and performance problems since these low-order models are subject to model uncertainty. Data-driven control methods seek to alleviate this problem by synthesizing controllers based on time-domain or frequency-domain data (i.e., synthesis is model independant). A survey on the differences associated with model-based control and data-driven control has been addressed in \cite{HW13} and \cite{BCE12}; the authors assert that model-based control methods are inherently less robust due to the unmodeled dynamics of a process, and that these controllers are unsafe for practical applications. In other words, the parametric uncertainties and the unmodeled dynamics associated with the data-driven scheme are irrelevant, and the only source of uncertainty is the measurement noise.
+
+Data-driven control methods using frequency-domain data are design schemes that continue to spark the interest of many researchers. The frequency-domain approach offers many advantages compared to time-domain methods :
+\begin{itemize}
+\item Without knowledge of the transfer function, the dynamics of a system can be captured experimentally through the frequency response.
+\item Relative and absolute stability of a closed-loop system can be determined with the knowledge of the open-loop frequency response.
+\item Noise disturbance generated in the system can be easily determined using frequency analysis.
+\item System uncertainties can be modeled at discrete frequency points (which reduces the conservatism associated with uncertainty modeling). 
+\end{itemize}
+
+For this specific application, an $RST$ controller structure was implemented to control the dynamics of the power converter control system. The $RST$ controller structure is an effective discrete-time two-degree of freedom (2DOF) polynomial controller where the tracking and regulation characteristics of a closed-loop system can be formulated independently \cite{LZ06}. To design this controller, a $\mathcal{H}_\infty$ loop-shaping method was used to shape a desired sensitivity function. Robust controller design methods belonging to the $\mathcal{H}_{\infty}$ control framework minimizes the $\mathcal{H}_{\infty}$ norm of a weighted closed-loop sensitivity function \cite{ZD98}. In this method, a convex optimization problem can be formulated if each of the $RST$ polynomials are linearly parameterized \cite{NEK15}. 
+
+For this power converter application, it was desired to track a desired reference signal while maintaining sufficient stability margins. Therefore, 
+
+\bibliography{linear}
+\end{document}

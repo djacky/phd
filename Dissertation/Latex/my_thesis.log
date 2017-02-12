@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  12 FEB 2017 01:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  12 FEB 2017 22:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1899,7 +1899,7 @@ Package microtype Info: Loading generic settings for font family
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <8> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 25.
  [3]
-<images/power_converter_block.pdf, id=210, 530.78299pt x 153.373pt>
+<images/power_converter_block.pdf, id=206, 530.78299pt x 153.373pt>
 File: images/power_converter_block.pdf Graphic file (type pdf)
 
 <use images/power_converter_block.pdf>
@@ -1918,7 +1918,7 @@ onverted-to.pdf images/frf_uncertain.eps>
 (epstopdf)             \includegraphics on input line 63.
 Package epstopdf Info: Output file is already uptodate.
 
-<images/frf_uncertain-eps-converted-to.pdf, id=211, 1156.32pt x 638.385pt>
+<images/frf_uncertain-eps-converted-to.pdf, id=207, 1156.32pt x 638.385pt>
 File: images/frf_uncertain-eps-converted-to.pdf Graphic file (type pdf)
 
 <use images/frf_uncertain-eps-converted-to.pdf>
@@ -1926,7 +1926,7 @@ Package pdftex.def Info: images/frf_uncertain-eps-converted-to.pdf used on inpu
 t line 63.
 (pdftex.def)             Requested size: 417.68646pt x 230.59769pt.
 
-<images/circle_rotation.pdf, id=212, 177.463pt x 177.463pt>
+<images/circle_rotation.pdf, id=208, 177.463pt x 177.463pt>
 File: images/circle_rotation.pdf Graphic file (type pdf)
 
 <use images/circle_rotation.pdf>
@@ -1936,14 +1936,14 @@ Package pdftex.def Info: images/circle_rotation.pdf used on input line 70.
 
 LaTeX Warning: Citation `NK15' on page 4 undefined on input line 77.
 
-<images/galleria_stampe.jpg, id=213, 414.348pt x 409.53pt>
+<images/galleria_stampe.jpg, id=209, 414.348pt x 409.53pt>
 File: images/galleria_stampe.jpg Graphic file (type jpg)
 
 <use images/galleria_stampe.jpg>
 Package pdftex.def Info: images/galleria_stampe.jpg used on input line 82.
 (pdftex.def)             Requested size: 208.84323pt x 206.4142pt.
 
-<images/some_vector_graphics.pdf, id=216, 185.227pt x 182.93445pt>
+<images/some_vector_graphics.pdf, id=212, 185.227pt x 182.93445pt>
 File: images/some_vector_graphics.pdf Graphic file (type pdf)
 
 <use images/some_vector_graphics.pdf>
@@ -1952,25 +1952,25 @@ Package pdftex.def Info: images/some_vector_graphics.pdf used on input line 89.
 (pdftex.def)             Requested size: 185.22655pt x 182.93399pt.
  [4 <./images/power_converter_block.pdf>]
 [5 <./images/frf_uncertain-eps-converted-to.pdf> <./images/circle_rotation.pdf>
-] <images/lorem.jpg, id=327, 240.9pt x 180.675pt>
+] <images/lorem.jpg, id=322, 240.9pt x 180.675pt>
 File: images/lorem.jpg Graphic file (type jpg)
  <use images/lorem.jpg>
 Package pdftex.def Info: images/lorem.jpg used on input line 112.
 (pdftex.def)             Requested size: 187.95763pt x 140.97278pt.
 
-<images/ipsum.jpg, id=328, 240.9pt x 180.675pt>
+<images/ipsum.jpg, id=323, 240.9pt x 180.675pt>
 File: images/ipsum.jpg Graphic file (type jpg)
  <use images/ipsum.jpg>
 Package pdftex.def Info: images/ipsum.jpg used on input line 115.
 (pdftex.def)             Requested size: 187.95763pt x 140.97278pt.
 
-<images/dolor.jpg, id=329, 240.9pt x 180.675pt>
+<images/dolor.jpg, id=324, 240.9pt x 180.675pt>
 File: images/dolor.jpg Graphic file (type jpg)
  <use images/dolor.jpg>
 Package pdftex.def Info: images/dolor.jpg used on input line 117.
 (pdftex.def)             Requested size: 187.95763pt x 140.97278pt.
 
-<images/sit.jpg, id=330, 240.9pt x 180.675pt>
+<images/sit.jpg, id=325, 240.9pt x 180.675pt>
 File: images/sit.jpg Graphic file (type jpg)
  <use images/sit.jpg>
 Package pdftex.def Info: images/sit.jpg used on input line 119.
@@ -2030,7 +2030,7 @@ Appendix A.
 
 
 ]
-<tail/cv.pdf, id=423, 597.23125pt x 845.1575pt>
+<tail/cv.pdf, id=417, 597.23125pt x 845.1575pt>
 File: tail/cv.pdf Graphic file (type pdf)
  <use tail/cv.pdf>
 Package pdftex.def Info: tail/cv.pdf used on input line 5.
@@ -2040,7 +2040,7 @@ File: tail/cv.pdf Graphic file (type pdf)
 <use tail/cv.pdf>
 Package pdftex.def Info: tail/cv.pdf used on input line 5.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
- <tail/cv.pdf, id=426, page=1, 597.23125pt x 845.1575pt>
+ <tail/cv.pdf, id=420, page=1, 597.23125pt x 845.1575pt>
 File: tail/cv.pdf Graphic file (type pdf)
 
 <use tail/cv.pdf, page 1>
@@ -2064,7 +2064,7 @@ File: tail/cv.pdf Graphic file (type pdf)
 Package pdftex.def Info: tail/cv.pdf, page1 used on input line 5.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
  [19 <./tail/cv.pdf>]
-<tail/cv.pdf, id=441, page=2, 597.23125pt x 845.1575pt>
+<tail/cv.pdf, id=434, page=2, 597.23125pt x 845.1575pt>
 File: tail/cv.pdf Graphic file (type pdf)
 
 <use tail/cv.pdf, page 2>
@@ -2088,15 +2088,9 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 65.
 ) (./tail/appendix.aux) (./tail/biblio.aux) (./tail/cv.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
+Package rerunfilecheck Info: File `my_thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 7A36DA270308C338AA66B4C047CFB432;747.
 
-
-Package rerunfilecheck Warning: File `my_thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `my_thesis.out':
-(rerunfilecheck)             Before: 2396DD39CA9EEAEB5705BF16972549EF;756
-(rerunfilecheck)             After:  7A36DA270308C338AA66B4C047CFB432;747.
 
 LaTeX Warning: There were undefined references.
 
@@ -2106,52 +2100,31 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
  ) 
 Here is how much of TeX's memory you used:
- 33119 strings out of 493014
- 602635 string characters out of 6133351
- 799851 words of memory out of 5000000
- 35728 multiletter control sequences out of 15000+600000
+ 33108 strings out of 493014
+ 602461 string characters out of 6133351
+ 799770 words of memory out of 5000000
+ 35724 multiletter control sequences out of 15000+600000
  116965 words of font info for 230 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,18n,77p,10466b,2245s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{table.caption.11} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.17} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.20} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{appendix*.19} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{chapter*.10} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.8} has been referenced but does not exist,
- replaced by a fixed one
-
-pdfTeX warning (dest): name{section*.6} has been referenced but does not exist,
- replaced by a fixed one
-
-{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
-usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2016/
-texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/public/cm-super/sfit0800.pfb></usr/local/texlive/2016/texmf-dist/font
-s/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2016/texmf-dist/fonts/
-type1/public/cm-super/sfss1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
-pe1/public/cm-super/sfss2074.pfb></usr/local/texlive/2016/texmf-dist/fonts/type
-1/public/cm-super/sftt0800.pfb>
-Output written on my_thesis.pdf (36 pages, 1118127 bytes).
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/tex
+live/2016/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2016/texmf
+-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2016/texmf-dist/
+fonts/type1/public/cm-super/sfit0800.pfb></usr/local/texlive/2016/texmf-dist/fo
+nts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2016/texmf-dist/font
+s/type1/public/cm-super/sfss1095.pfb></usr/local/texlive/2016/texmf-dist/fonts/
+type1/public/cm-super/sfss2074.pfb></usr/local/texlive/2016/texmf-dist/fonts/ty
+pe1/public/cm-super/sftt0800.pfb>
+Output written on my_thesis.pdf (36 pages, 1117734 bytes).
 PDF statistics:
- 519 PDF objects out of 1000 (max. 8388607)
- 405 compressed objects within 5 object streams
- 113 named destinations out of 1000 (max. 500000)
+ 509 PDF objects out of 1000 (max. 8388607)
+ 396 compressed objects within 4 object streams
+ 106 named destinations out of 1000 (max. 500000)
  32968 words of extra memory for PDF output out of 35830 (max. 10000000)
 

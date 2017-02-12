@@ -1,0 +1,380 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  11 FEB 2017 22:34
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**titlepage.tex
+(./titlepage.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+
+! LaTeX Error: Environment titlepage undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \begin{titlepage}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \begin{center}
+                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 2--2
+[] 
+ []
+
+! Undefined control sequence.
+l.8 {\huge
+           A Data-Driven Robust Controller Design Methodology\\[12pt] Using ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (6.66669pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 A 
+ []
+
+
+Overfull \hbox (23.77785pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 Data- 
+ []
+
+
+Overfull \hbox (27.25008pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 Driven 
+ []
+
+
+Overfull \hbox (14.7917pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 Ro- 
+ []
+
+
+Overfull \hbox (17.77779pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 bust 
+ []
+
+
+Overfull \hbox (19.88892pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 Con- 
+ []
+
+
+Overfull \hbox (24.66672pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 troller 
+ []
+
+
+Overfull \hbox (15.00003pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 De- 
+ []
+
+
+Overfull \hbox (16.3889pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 sign 
+ []
+
+
+Overfull \hbox (35.75008pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 Method- 
+ []
+
+
+Overfull \hbox (10.72223pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 ol- 
+ []
+
+
+Overfull \hbox (14.61116pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 ogy 
+ []
+
+
+Overfull \hbox (23.26395pt too wide) in paragraph at lines 8--8
+ []\OT1/cmss/m/n/10 Using 
+ []
+
+
+Overfull \hbox (45.61118pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 Frequency- 
+ []
+
+
+Overfull \hbox (32.52786pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 Domain 
+ []
+
+
+Overfull \hbox (20.44452pt too wide) in paragraph at lines 8--8
+ \OT1/cmss/m/n/10 Data 
+ []
+
+! Undefined control sequence.
+l.9 \textcolor
+              {gray}{\small{THIS IS A TEMPORARY TITLE PAGE \\ It will be rep...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.9 \textcolor{gray}{\small
+                           {THIS IS A TEMPORARY TITLE PAGE \\ It will be rep...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (39.77794pt too wide) in paragraph at lines 9--9
+ []\OT1/cmss/m/n/10 grayTHIS 
+ []
+
+
+Overfull \hbox (8.33337pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 IS 
+ []
+
+
+Overfull \hbox (6.66669pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 A 
+ []
+
+
+Overfull \hbox (24.86118pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 TEM- 
+ []
+
+
+Overfull \hbox (17.08334pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 PO- 
+ []
+
+
+Overfull \hbox (26.25009pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 RARY 
+ []
+
+
+Overfull \hbox (12.9167pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 TI- 
+ []
+
+
+Overfull \hbox (18.19449pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 TLE 
+ []
+
+
+Overfull \hbox (24.58337pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 PAGE 
+ []
+
+
+Overfull \hbox (6.38892pt too wide) in paragraph at lines 9--9
+ []\OT1/cmss/m/n/10 It 
+ []
+
+
+Overfull \hbox (14.00002pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 will 
+ []
+
+
+Overfull \hbox (9.8889pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 be 
+ []
+
+
+Overfull \hbox (11.19446pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 re- 
+ []
+
+
+Overfull \hbox (26.41669pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 placed 
+ []
+
+
+Overfull \hbox (11.19449pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 for 
+ []
+
+
+Overfull \hbox (13.22223pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 the 
+ []
+
+
+Overfull \hbox (8.69444pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 fi- 
+ []
+
+
+Overfull \hbox (12.36113pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 nal 
+ []
+
+
+Overfull \hbox (19.47224pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 print 
+ []
+
+
+Overfull \hbox (9.50002pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 by 
+ []
+
+
+Overfull \hbox (4.80557pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 a 
+ []
+
+
+Overfull \hbox (15.80559pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 ver- 
+ []
+
+
+Overfull \hbox (16.3889pt too wide) in paragraph at lines 9--9
+ \OT1/cmss/m/n/10 sion 
+ []
+
+
+Overfull \hbox (35.08339pt too wide) in paragraph at lines 9--10
+ []\OT1/cmss/m/n/10 provided 
+ []
+
+
+Overfull \hbox (9.50002pt too wide) in paragraph at lines 9--10
+ \OT1/cmss/m/n/10 by 
+ []
+
+
+Overfull \hbox (13.22223pt too wide) in paragraph at lines 9--10
+ \OT1/cmss/m/n/10 the 
+ []
+
+
+Overfull \hbox (15.02779pt too wide) in paragraph at lines 9--10
+ \OT1/cmss/m/n/10 ser- 
+ []
+
+
+Overfull \hbox (15.8889pt too wide) in paragraph at lines 9--10
+ \OT1/cmss/m/n/10 vice 
+ []
+
+
+Overfull \hbox (51.55562pt too wide) in paragraph at lines 9--10
+ \OT1/cmss/m/n/10 academique. 
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 13.
+! Undefined control sequence.
+<argument> ...ma \@parboxrestore \includegraphics 
+                                                  [width=4cm]{images/epfl}\@...
+l.14 ...{\includegraphics[width=4cm]{images/epfl}}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no √ in font cmss10!
+Missing character: There is no ® in font cmss10!
+Missing character: There is no √ in font cmss10!
+Missing character: There is no © in font cmss10!
+Missing character: There is no √ in font cmss10!
+Missing character: There is no © in font cmss10!
+Missing character: There is no √ in font cmss10!
+Missing character: There is no † in font cmss10!
+Missing character: There is no √ in font cmss10!
+Missing character: There is no © in font cmss10!
+Missing character: There is no √ in font cmss10!
+Missing character: There is no © in font cmss10!
+Missing character: There is no √ in font cmss10!
+Missing character: There is no © in font cmss10!
+Missing character: There is no √ in font cmss10!
+Missing character: There is no â in font cmss10!
+Missing character: There is no √ in font cmss10!
+Missing character: There is no © in font cmss10!
+Missing character: There is no √ in font cmss10!
+Missing character: There is no © in font cmss10!
+Missing character: There is no √ in font cmss10!
+Missing character: There is no ® in font cmss10!
+! Undefined control sequence.
+<argument> ...em} Achille Nicoletti\\[9pt] \small 
+                                                  accept√©e sur proposition ...
+l.38 Lausanne, EPFL, 2017}
+                          
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no √ in font cmss10!
+Missing character: There is no © in font cmss10!
+Missing character: There is no √ in font cmss10!
+Missing character: There is no © in font cmss10!
+Missing character: There is no √ in font cmss10!
+Missing character: There is no ® in font cmss10!
+Missing character: There is no √ in font cmss10!
+Missing character: There is no ® in font cmss10!
+
+Overfull \hbox (8191.99997pt too wide) in paragraph at lines 13--40
+ [][] 
+ []
+
+
+! LaTeX Error: \begin{document} ended by \end{titlepage}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 \end{titlepage}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+! Emergency stop.
+<*> titlepage.tex
+                 
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 14 strings out of 493014
+ 229 string characters out of 6133351
+ 56601 words of memory out of 5000000
+ 3656 multiletter control sequences out of 15000+600000
+ 3945 words of font info for 15 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 19i,9n,12p,167b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

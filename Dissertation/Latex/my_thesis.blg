@@ -1,0 +1,20 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: my_thesis.aux
+A level-1 auxiliary file: head/dedication.aux
+A level-1 auxiliary file: head/abstracts.aux
+A level-1 auxiliary file: main/ch1_introduction.aux
+A level-1 auxiliary file: main/ch2_figures_tables.aux
+A level-1 auxiliary file: main/ch3_math.aux
+A level-1 auxiliary file: main/ch4_more_text.aux
+A level-1 auxiliary file: tail/appendix.aux
+A level-1 auxiliary file: tail/biblio.aux
+The style file: IEEEtran.bst
+A level-1 auxiliary file: tail/cv.aux
+Database file #1: linear.bib
+Warning--I didn't find a database entry for "NK15"
+Warning--I didn't find a database entry for "atc13"
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+(There were 2 warnings)

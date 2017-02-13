@@ -326,7 +326,39 @@ The optimal values of $\theta_c$ may vary depending on the problem that is being
 \section{Simulation Examples} \label{sec:sim}
 Let us now consider several examples in order to determine the validity of the proposed method. For each example, the \texttt{MATLAB} software was used in conjunction with the \texttt{fmincon} function to solve the proposed optimization problem. 
 
-\subsection{Example 1: Robust Performance}
+\subsection{Example 1: Convergence to Optimal Solution}
+Consider the following discrete time SISO system:
+\begin{equation}
+G(z) = \frac{z-0.186}{z^3 - 1.116z^2 + 0.465z-0.093}
+\end{equation}
+Note that since this system is stable, then the coprimes can be selected as $N(z) = G(z)$ and $M(z) = 1$. The control objective of this case study is to design a controller (with integral action) that minimizes the nominal performance condition $\|W_1S \|_{\infty}$ (i.e., minimize $\gamma$ in $\|W_1S \|_{\infty} < \gamma$), where
+\begin{equation}
+W_1(z) = \frac{0.4902(z^2-1.0431z+0.3263)}{(z-1)(z-0.282)}
+\end{equation}
+For this controller synthesis, we can simply select the basis functions in (\ref{eq:Laguerre_z}) to be FIR filters (i.e., $\rho_d = 0$) for $X(\bm{\rho})$ and $Y(\bm{\rho})$. In order to avoid unboundedness of $W_1$ at $\omega = 0$ and have integral action, the basis functions for $Y(\bm{\rho})$ will be multiplied by $(z-1)/z$. It will be shown that as the order of $F(\bm{\rho})$ increases, the optimal solution $\gamma$ will decrease monotonically and converge to the optimal solution. 
+
+\subsubsection{Simulation Results}
+The \texttt{mixsyn} command from \texttt{MATLAB}'s Robust Control toolbox yields an optimal value of $\gamma^* = 0.5522$ with a fifth-order controller. Therefore, according to Theorem.\ref{thm_1}, a fifth-order controller was also implemented with the proposed method (i.e., to ensure convergence to the optimal solution). Additionally, two simulations were performed with the proposed method; one simulation with $F(\bm{\rho})$ selected such that the basis function is an FIR filter (i.e., Laguerre basis functions in (\ref{eq:Laguerre_z}) with $\rho_d = 0$) and one simulation with $F(\bm{\rho})$ selected such that $\rho_d$ is a decision variable.  Let $F_{n_f}(\bm{\rho})$ denote the function $F(\bm{\rho})$ of $n_f$-th order and $\gamma_{n_f}$ denote the optimal solution of the nominal performance condition for a given order of $F_{n_f}(\bm{\rho})$. Figure.~\ref{fig:ex1_1} shows the convergence of the optimal solution $\gamma_{n_f}$ as a function $n_f$; it can be observed that with the proposed frequency-domain method, the optimal solution to the $\mathcal{H}_{\infty}$ problem converges monotonically as the order of $F(\bm{\rho})$ increases. Additionally, when the parameter $\rho_d$ is a decision variable, the convergence time is reduced. 
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{../pics/gamma_convergence_F_var.eps}
+\caption{Optimal solution obtained from \texttt{mixsyn} command (straight-red line); $\gamma_{n_f}$ for $F(\bm{\rho})$ as an FIR filter ({\color{red}{- -$\square$- -}});  $\gamma_{n_f}$ for $F(\bm{\rho})$ with $\rho_d$ as a decision variable ({\color{red}{- -$*$- -}}); the value of $\rho_d$ when used as a decision variable  ({\color{blue}{- -$\circ$- -}}) }
+\label{fig:ex1_1}
+\end{figure}
+
+Note that the controller order was fixed in this case study, since it was known (from the \texttt{mixsyn} command) that the optimal controller order was $5$. However, suppose that the order and structure of the optimal controller $K = XY^{-1}$ was unknown. In the case, one can simply fix the structure of the basis function of $F(\bm{\rho})$ with a large order and solve the optimization problem as the order of the controller is varied. The lowest order controller that achieves convergence can then be selected as the optimal controller. Figure.~\ref{fig:ex1_2} shows the convergence of the optimal solution then the order of the basis function $F(\bm{\rho})$ is fixed to $20$ (as an FIR filter) and the controller order is varied; it can be observed that convergence to the optimal solution does indeed occur with a $5$-th order controller.
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{../pics/gamma_convergence_F_var.eps}
+\caption{Optimal solution obtained from \texttt{mixsyn} command (straight-red line); $\gamma_{n_f}$ for $F(\bm{\rho})$ as an FIR filter ({\color{red}{- -$\square$- -}});  $\gamma_{n_f}$ for $F(\bm{\rho})$ with $\rho_d$ as a decision variable ({\color{red}{- -$*$- -}}); the value of $\rho_d$ when used as a decision variable  ({\color{blue}{- -$\circ$- -}}) }
+\label{fig:ex1_2}
+\end{figure}
+
+
+
+\subsection{Example 2: Robust Performance}
 Consider the unstable non-minimum phase system analyzed in \cite{Zhe10}  and \cite{Ho03} (which is subject to multiplicative uncertainty):
 \begin{equation}
 G(s) = \frac{s-1}{s^2+0.8s-0.2}
@@ -343,12 +375,12 @@ where $\rho_g \in \mathbb{R}_+$. For a PID controller, the structure of the cont
 \subsubsection{Simulation Results}
 The problem in (\ref{eq:opt_true}) is solved by converting it to an SDP problem and gridding the frequency from $10^{-3}$ to $10^{3} \ rad/s$ (using $500$ logarithmically spaced points). A $20$-th order basis function for $F(\bm{\rho})$ is selected (as defined in (\ref{eq:Laguerre_sum_c})). For comparative purposes, the \texttt{MATLAB} \texttt{mixsyn} function from the Robust Control Toolbox is used to compute a controller with the given weighting filters; the toolbox yields a $4$-th order controller. 
 
-Table.\ref{tab:ex1_1} shows the values of the optimal solutions obtained from various methods. The convex problem in (\ref{eq:convex_con}) was solved with $\rho_g = \rho_c^{\prime} = 1$. Since \texttt{mixsyn} minimizes $\|[W_1S \ \ W_2T] \|_\infty$, it can be observed that a smaller value of this criteria is obtained (with a $4$-th order controller). However, with a simple PID controller, the proposed method yields the best performance for the \textit{true} robust performance criteria in (\ref{eq:inf_norm}). The optimal value for the the decision variable of $F(\bm{\rho})$ was obtained as $\rho_o^{\star} = 0.933$, while the optimal values of the remaining decision variables (for both the convex and proposed optimization methods) are shown in Table.\ref{tab:ex1_2}. 
+Table.\ref{tab:ex2_1} shows the values of the optimal solutions obtained from various methods. The convex problem in (\ref{eq:convex_con}) was solved with $\rho_g = \rho_c^{\prime} = 1$. Since \texttt{mixsyn} minimizes $\|[W_1S \ \ W_2T] \|_\infty$, it can be observed that a smaller value of this criteria is obtained (with a $4$-th order controller). However, with a simple PID controller, the proposed method yields the best performance for the \textit{true} robust performance criteria in (\ref{eq:inf_norm}). The optimal value for the the decision variable of $F(\bm{\rho})$ was obtained as $\rho_o^{\star} = 0.933$, while the optimal values of the remaining decision variables (for both the convex and proposed optimization methods) are shown in Table.\ref{tab:ex2_2}. 
 
 \begin{table}[]
 \centering
 \caption{My caption}
-\label{tab:ex1_1}
+\label{tab:ex2_1}
 \begin{tabular}{c|c|c}
                                                                                                           & $\| |W_1S| + |W_2T| \|_{\infty}$ & $\left\| \begin{matrix} W_1S \\[2pt] W_2T \end{matrix} \right\|_{\infty} $ \\ \hline
 \texttt{MATLAB\textsuperscript{\tiny{\textregistered}}} (\texttt{mixsyn})                                                                           & $1.111$                          & $0.789$                                                     \\ \hline
@@ -361,35 +393,13 @@ Table.\ref{tab:ex1_1} shows the values of the optimal solutions obtained from va
 \begin{table}[]
 \centering
 \caption{My caption}
-\label{tab:ex1_2}
+\label{tab:ex2_2}
 \begin{tabular}{c|c|cccc}
                                                           & $\rho_1^{\star}$ & $\rho_2^{\star}$              & $\rho_3^{\star}$              & $\rho_g^{\star}$             & $(\rho_c^{\prime})^{\star}$ \\ \hline
 \begin{tabular}[c]{@{}c@{}}Convex\\ Method (\ref{eq:convex_con})\end{tabular}   & $-0.565$         & \multicolumn{1}{c|}{$-0.013$} & \multicolumn{1}{c|}{$-0.397$} & \multicolumn{1}{c|}{$1$}     & $1$                         \\ \hline
 \begin{tabular}[c]{@{}c@{}}Proposed\\ Method (\ref{eq:opt_true})\end{tabular} & $-0.486$         & \multicolumn{1}{c|}{$-0.021$} & \multicolumn{1}{c|}{$-0.486$} & \multicolumn{1}{c|}{$1.647$} & $1.647$                    
 \end{tabular}
 \end{table}
-
-\subsection{Example 2: Convergence to Optimal Solution}
-Consider the following discrete time SISO system:
-\begin{equation}
-G(z) = \frac{z-0.186}{z^3 - 1.116z^2 + 0.465z-0.093}
-\end{equation}
-Note that since this system is stable, then the coprimes can be selected as $N(z) = G(z)$ and $M(z) = 1$. The control objective of this case study is to design a controller (with integral action) that minimizes the nominal performance condition $\|W_1S \|_{\infty}$ (i.e., minimize $\gamma$ in $\|W_1S \|_{\infty} < \gamma$), where
-\begin{equation}
-W_1(z) = \frac{0.4902(z^2-1.0431z+0.3263)}{(z-1)(z-0.282)}
-\end{equation}
-For this controller synthesis, we can simply select the basis functions in (\ref{eq:Laguerre_z}) to be FIR filters (i.e., $\rho_d = 0$) for $X(\bm{\rho})$ and $Y(\bm{\rho})$. In order to avoid unboundedness of $W_1$ at $\omega = 0$ and have integral action, the basis functions for $Y(\bm{\rho})$ will be multiplied by $(z-1)/z$. It will be shown that as the order of $F(\bm{\rho})$ increases, the optimal solution $\gamma$ will decrease monotonically and converge to the optimal solution. 
-
-\subsubsection{Simulation Results}
-The \texttt{mixsyn} command from \texttt{MATLAB}'s Robust Control toolbox yields an optimal value of $\gamma^* = 0.5522$ with a fifth-order controller. Therefore, according to Theorem.\ref{thm_1}, a fifth-order controller was also implemented with the proposed method (i.e., to ensure convergence to the optimal solution). Additionally, two simulations were performed with the proposed method; one simulation with $F(\bm{\rho})$ selected such that the basis function is an FIR filter (i.e., Laguerre basis functions in (\ref{eq:Laguerre_z}) with $\rho_d = 0$) and one simulation with $F(\bm{\rho})$ selected such that $\rho_d$ is a decision variable.  Let $F_{n_f}(\bm{\rho})$ denote the function $F(\bm{\rho})$ of $n_f$-th order and $\gamma_{n_f}$ denote the optimal solution of the nominal performance condition for a given order of $F_{n_f}(\bm{\rho})$. Figure.~\ref{fig:ex2} shows the convergence of the optimal solution $\gamma_{n_f}$ as a function $n_f$; it can be observed that with the proposed frequency-domain method, the optimal solution to the $\mathcal{H}_{\infty}$ problem converges monotonically as the order of $F(\bm{\rho})$ increases. Additionally, when the parameter $\rho_d$ is a decision variable, the convergence time is reduced. 
-
-\begin{figure}
-\centering
-\includegraphics[width=\columnwidth]{../pics/gamma_convergence.eps}
-\caption{Optimal solution obtained from \texttt{mixsyn} command (straight-red line); $\gamma_{n_f}$ for $F(\rho)$ as an FIR filter ({\color{red}{- -$\square$- -}});  $\gamma_{n_f}$ for $F(\rho)$ with $\rho_d$ as a decision variable ({\color{red}{- -$*$- -}}); the value of $\rho_d$ when used as a decision variable  ({\color{blue}{- -$\circ$- -}}) }
-\label{fig:ex2}
-\end{figure}
-
 
 
 

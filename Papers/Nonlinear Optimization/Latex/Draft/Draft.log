@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.5)  13 FEB 2017 09:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.5)  13 FEB 2017 12:17
 entering extended mode
 **Draft.tex
 (Draft.tex
@@ -386,51 +386,71 @@ sts
  []
 
 [3 <../pics/circle_rotation_RP.pdf>]
+Package epstopdf Info: Source file: <../pics/gamma_convergence_F_var.eps>
+(epstopdf)                    date: 2017-01-31 09:12:51
+(epstopdf)                    size: 124825 bytes
+(epstopdf)             Output file: <../pics/gamma_convergence_F_var-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2017-02-13 12:05:22
+(epstopdf)                    size: 10055 bytes
+(epstopdf)             Command: <epstopdf --outfile=../pics/gamma_convergence_F
+_var-eps-converted-to.pdf ../pics/gamma_convergence_F_var.eps>
+(epstopdf)             \includegraphics on input line 345.
+Package epstopdf Info: Output file is already uptodate.
+
+<../pics/gamma_convergence_F_var-eps-converted-to.pdf, id=78, 1156.32pt x 667.4
+9374pt>
+File: ../pics/gamma_convergence_F_var-eps-converted-to.pdf Graphic file (type p
+df)
+ <use ../pics/gamma_convergence_F_var-eps-converted-to.pdf>
+Package pdftex.def Info: ../pics/gamma_convergence_F_var-eps-converted-to.pdf u
+sed on input line 345.
+(pdftex.def)             Requested size: 245.71811pt x 141.838pt.
+ [4]
+Package epstopdf Info: Source file: <../pics/gamma_convergence_F_var.eps>
+(epstopdf)                    date: 2017-01-31 09:12:51
+(epstopdf)                    size: 124825 bytes
+(epstopdf)             Output file: <../pics/gamma_convergence_F_var-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2017-02-13 12:05:22
+(epstopdf)                    size: 10055 bytes
+(epstopdf)             Command: <epstopdf --outfile=../pics/gamma_convergence_F
+_var-eps-converted-to.pdf ../pics/gamma_convergence_F_var.eps>
+(epstopdf)             \includegraphics on input line 354.
+Package epstopdf Info: Output file is already uptodate.
+File: ../pics/gamma_convergence_F_var-eps-converted-to.pdf Graphic file (type p
+df)
+
+<use ../pics/gamma_convergence_F_var-eps-converted-to.pdf>
+Package pdftex.def Info: ../pics/gamma_convergence_F_var-eps-converted-to.pdf u
+sed on input line 354.
+(pdftex.def)             Requested size: 245.71811pt x 141.838pt.
+
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 348.
+               Default added (so using `tbp') on input line 380.
 
-LaTeX Font Info:    Try loading font information for OMS+pcr on input line 354.
+LaTeX Font Info:    Try loading font information for OMS+pcr on input line 386.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omspcr.fd"
 File: omspcr.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <5> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 354.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 386.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 361.
+               Default added (so using `tbp') on input line 393.
 
-[4]
-Package epstopdf Info: Source file: <../pics/gamma_convergence.eps>
-(epstopdf)                    date: 2017-01-31 09:12:51
-(epstopdf)                    size: 124825 bytes
-(epstopdf)             Output file: <../pics/gamma_convergence-eps-converted-to
-.pdf>
-(epstopdf)                    date: 2017-01-31 09:12:56
-(epstopdf)                    size: 10055 bytes
-(epstopdf)             Command: <epstopdf --outfile=../pics/gamma_convergence-e
-ps-converted-to.pdf ../pics/gamma_convergence.eps>
-(epstopdf)             \includegraphics on input line 388.
-Package epstopdf Info: Output file is already uptodate.
-
-<../pics/gamma_convergence-eps-converted-to.pdf, id=81, 1156.32pt x 667.49374pt
->
-File: ../pics/gamma_convergence-eps-converted-to.pdf Graphic file (type pdf)
- <use ../pics/gamma_convergence-eps-converted-to.pdf>
-Package pdftex.def Info: ../pics/gamma_convergence-eps-converted-to.pdf used on
- input line 388.
-(pdftex.def)             Requested size: 245.71811pt x 141.838pt.
- [5 <../pics/gamma_convergence-eps-converted-to.pdf>]
-Underfull \hbox (badness 5417) in paragraph at lines 431--433
+[5 <../pics/gamma_convergence_F_var-eps-converted-to.pdf>]
+Underfull \hbox (badness 5417) in paragraph at lines 441--443
 \OT1/ptm/m/n/10 From these re-la-tions, it is ev-i-dent that $\OML/cmm/m/it/10 
 G[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 ) =$
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 453.
+               Default added (so using `tbp') on input line 463.
 
 Package epstopdf Info: Source file: <../pics/step_multi_convex.eps>
 (epstopdf)                    date: 2017-01-30 16:51:27
@@ -441,15 +461,15 @@ Package epstopdf Info: Source file: <../pics/step_multi_convex.eps>
 (epstopdf)                    size: 81138 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/step_multi_convex-e
 ps-converted-to.pdf ../pics/step_multi_convex.eps>
-(epstopdf)             \includegraphics on input line 472.
+(epstopdf)             \includegraphics on input line 482.
 Package epstopdf Info: Output file is already uptodate.
 
-<../pics/step_multi_convex-eps-converted-to.pdf, id=99, 1156.32pt x 633.36626pt
->
+<../pics/step_multi_convex-eps-converted-to.pdf, id=100, 1156.32pt x 633.36626p
+t>
 File: ../pics/step_multi_convex-eps-converted-to.pdf Graphic file (type pdf)
  <use ../pics/step_multi_convex-eps-converted-to.pdf>
 Package pdftex.def Info: ../pics/step_multi_convex-eps-converted-to.pdf used on
- input line 472.
+ input line 482.
 (pdftex.def)             Requested size: 245.71811pt x 134.58614pt.
 Package epstopdf Info: Source file: <../pics/step_multi_optimal.eps>
 (epstopdf)                    date: 2017-01-30 16:51:41
@@ -460,27 +480,26 @@ o.pdf>
 (epstopdf)                    size: 156424 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/step_multi_optimal-
 eps-converted-to.pdf ../pics/step_multi_optimal.eps>
-(epstopdf)             \includegraphics on input line 479.
+(epstopdf)             \includegraphics on input line 489.
 Package epstopdf Info: Output file is already uptodate.
 
-<../pics/step_multi_optimal-eps-converted-to.pdf, id=100, 1156.32pt x 633.36626
+<../pics/step_multi_optimal-eps-converted-to.pdf, id=101, 1156.32pt x 633.36626
 pt>
 File: ../pics/step_multi_optimal-eps-converted-to.pdf Graphic file (type pdf)
  <use ../pics/step_multi_optimal-eps-converted-to.pdf>
 Package pdftex.def Info: ../pics/step_multi_optimal-eps-converted-to.pdf used o
-n input line 479.
+n input line 489.
 (pdftex.def)             Requested size: 245.71811pt x 134.58614pt.
 
 
-LaTeX Warning: Citation `EW09' on page 6 undefined on input line 480.
+LaTeX Warning: Citation `EW09' on page 6 undefined on input line 490.
 
 
-LaTeX Warning: Citation `EW09' on page 6 undefined on input line 480.
+LaTeX Warning: Citation `EW09' on page 6 undefined on input line 490.
 
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
-(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 485.
-[6 <../pics/step_multi_convex-eps-converted-to.pdf> <../pics/step_multi_optimal
--eps-converted-to.pdf>] (Draft.bbl
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 495.
+[6 <../pics/step_multi_convex-eps-converted-to.pdf>] (Draft.bbl
 Underfull \hbox (badness 2951) in paragraph at lines 104--107
 []\OT1/ptm/m/n/8 H. Ak-cay and B. Nin-ness, ``Or-thonor-mal ba-sis func-tions f
 or
@@ -498,7 +517,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the US letter (8.5in X 11in) paper size.
 
-[7] (Draft.aux)
+[7 <../pics/step_multi_optimal-eps-converted-to.pdf>] (Draft.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
@@ -508,10 +527,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3479 strings out of 493673
- 49826 string characters out of 3141521
- 120930 words of memory out of 3000000
- 6716 multiletter control sequences out of 15000+200000
+ 3480 strings out of 493673
+ 49869 string characters out of 3141521
+ 119938 words of memory out of 3000000
+ 6717 multiletter control sequences out of 15000+200000
  61525 words of font info for 158 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  42i,19n,30p,1362b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -526,28 +545,29 @@ les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmib10.pfb><C:/Program Files (x86)/MiK
 TeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
-fonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-rsfs/rsfs10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr
-8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Draft.pdf (7 pages, 633785 bytes).
+MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmsy5.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmsy9.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/ams
+fonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/publ
+ic/rsfs/rsfs10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/u
+crr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Draft.pdf (7 pages, 642135 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
+ 212 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

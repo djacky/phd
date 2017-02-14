@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70107" creator="Ipe 7.2.5">
-<info created="D:20160825154802" modified="D:20170209130259"/>
+<info created="D:20160825154802" modified="D:20170214093219"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -316,7 +316,7 @@ h
 8 0 0 8 232 760 e
 </path>
 <text matrix="1 0 0 1 -186.107 -3.88097" transformations="translations" pos="344 684" stroke="black" type="label" width="28.623" height="10.756" depth="3.59" valign="baseline" size="Large">$C(s)$</text>
-<text matrix="1 0 0 1 76.3328 -65.8793" transformations="translations" pos="344.758 745.554" stroke="black" type="label" width="30.927" height="12.014" depth="0" valign="baseline" size="Large">$e^{-sT_\alpha}$</text>
+<text matrix="1 0 0 1 80.3328 -65.8793" transformations="translations" pos="344.758 745.554" stroke="black" type="label" width="24.91" height="11.018" depth="0" valign="baseline" size="Large">$e^{-s \tau}$</text>
 <path stroke="black" pen="heavier">
 448 656 m
 448 624 l

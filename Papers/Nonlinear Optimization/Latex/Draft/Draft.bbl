@@ -72,6 +72,18 @@ S.~Boyd, M.~Hast, and K.~J. {\AA}str{\"o}m, ``{MIMO PID} tuning via iterated
   {LMI} restriction,'' \emph{International Journal of Robust and Nonlinear
   Control}, vol.~26, no.~8, pp. 1718--1731, 2016.
 
+\bibitem{UYY16}
+T.~Usami, K.~Yubai, D.~Yashiro, and S.~Komada, ``Multivariable fixed-structural
+  controller design for {$H_\infty$} loop shaping method by iterative {LMI}
+  optimization using frequency response data,'' in \emph{International
+  Conference on Advanced Mechatronic Systems (ICAMechS)}.\hskip 1em plus 0.5em
+  minus 0.4em\relax IEEE, 2016, pp. 218--223.
+
+\bibitem{KK16}
+A.~Karimi and C.~Kammer, ``A data-driven approach to robust control of
+  multivariable systems by convex optimization,'' \emph{arXiv preprint
+  arXiv:1610.08776}, 2016.
+
 \bibitem{KNZ16}
 A.~Karimi, A.~Nicoletti, and Y.~Zhu, ``Robust ${H}_\infty$ controller design
   using frequency-domain data via convex optimization,'' \emph{available online
@@ -99,6 +111,11 @@ P.~Seiler, B.~Vanek, J.~Bokor, and G.~J. Balas, ``Robust {$H_{\infty}$} filter
 G.~Galdos, A.~Karimi, and R.~Longchamp, ``${H}_\infty$ controller design for
   spectral {MIMO} models by convex optimization,'' \emph{Journal of Process
   Control}, vol.~20, no.~10, pp. 1175 -- 1182, 2010.
+
+\bibitem{FR05}
+G.~Ferreres and C.~Roos, ``Efficient convex design of robust feedforward
+  controllers,'' in \emph{44th IEEE Conference on Decision and Control},
+  Seville, Spain, December 2005, pp. 6460--6465.
 
 \bibitem{AN99b}
 H.~Akcay and B.~Ninness, ``Orthonormal basis functions for continuous-time

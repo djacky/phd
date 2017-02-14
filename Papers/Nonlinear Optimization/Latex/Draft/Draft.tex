@@ -40,7 +40,7 @@
 \usepackage{bm}
 \renewcommand{\qedsymbol}{$\blacksquare$}
 
-\title{Designing Robust Controllers With $H_{\infty}$ Performance Using Frequency-Domain Data}
+\title{Designing Robust Controllers With Optimal $H_{\infty}$ Performance Using Frequency-Domain Data}
 
 \author{Achille Nicoletti and Alireza Karimi
 \thanks{The authors A. Nicoletti and A. Karimi are with the Automatic Control Laboratory at Ecole Polytechnique F\'ed\'erale de Lausanne (EPFL), Switzerland.
@@ -57,7 +57,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-In this paper, a new frequency-domain method for designing robust controllers is proposed that provides optimal $\mathcal{H}_{\infty}$ performance. A nonlinear optimization problem is formulated which guarantees the stability of the closed-loop system whilst ensuring robust performance. A convexified version of the $\mathcal{H}_{\infty}$ criterion has been established in many works and have utilized a similar frequency gridding process; therefore, it is of interest to determine the definiteness of the solution produced by this convex optimization method with respect to the solution of the optimal $\mathcal{H}_{\infty}$ problem proposed in this work. 
+In this paper, a new frequency-domain method for designing robust controllers is proposed that provides optimal $\mathcal{H}_{\infty}$ performance. A nonlinear optimization problem is formulated which guarantees the stability of the closed-loop system whilst ensuring robust performance. It is shown that the optimal solution to the $\mathcal{H}_\infty$ problem is attained for a fixed-structure controller without any conservatism. A convexified version of the $\mathcal{H}_{\infty}$ criterion has been established in many works and have utilized a similar frequency gridding process; therefore, it is of interest to determine the definiteness of the solution produced by this convex optimization method with respect to the solution of the optimal $\mathcal{H}_{\infty}$ problem proposed in this work. 
 \end{abstract}
 
 
@@ -67,11 +67,11 @@ The uncertainties associated with many of today's complex systems pose challengi
 
 The robust controller design methodology can be realized in two manners: using time-domain or frequency-domain data. In this paper, the frequency-domain approach will be utilized for the controller design scheme. In a data-driven setting, this frequency domain approach can be used to avoid unmodeled dynamics associated with parametric models. A survey on the differences associated with model-based control and data-driven control has been addressed in \cite{HW13} and \cite{BCE12}. The authors in \cite{HDAV10} use the frequency response data of a stable system to design an optimal controller through a symmetric root locus technique. A robust frequency-domain control design method has been established in \cite{KNND13b} that requires a solution to a non-linear optimization problem. A frequency-domain loop-shaping approach to design fixed-structure controllers is presented in \cite{KNND13c}. However, in this method, the closed-loop stability is not guaranteed and should be verified a posteriori.
 
-Robust controller design methods belonging to the $\mathcal{H}_{\infty}$ control framework minimizes the $\mathcal{H}_{\infty}$ norm of a weighted closed-loop sensitivity function. Solving the $\mathcal{H}_{\infty}$ problem can be accomplished in a variety of manners. A convex approximation of the $\mathcal{H}_\infty$ criterion has been discussed in \cite{KG10} and \cite{KGL08} where convex constraints are imposed on the Nyquist diagram. The problem is convexified by constructing a linearly parameterized controller and devising linear constraints with respect to a desired open-loop transfer function.  A frequency-domain approach for computing low-order multivariable linearly parameterized controllers is presented in \cite{SOW10}. The $\mathcal{H}_{\infty}$ constraints are convexified around an initial stabilizing controller. An iterative algorithm is used that converges to a local optimal solution of the non-convex problem. However, in \cite{HAB13},  a convex-concave approximation of the $\mathcal{H}_{\infty}$ constraint is used which is based on an initial stabilizing controller. The extension of this method to design multivariable PID controllers for stable systems is presented in \cite{BHA16}. This method uses the same convex approximation as in  \cite{SOW10} but is limited to stable systems and PID structure. 
+Robust controller design methods belonging to the $\mathcal{H}_{\infty}$ control framework minimizes the $\mathcal{H}_{\infty}$ norm of a weighted closed-loop sensitivity function. Solving the $\mathcal{H}_{\infty}$ problem can be accomplished in a variety of manners. A convex approximation of the $\mathcal{H}_\infty$ criterion has been discussed in \cite{KG10} and \cite{KGL08} where convex constraints are imposed on the Nyquist diagram. The problem is convexified by constructing a linearly parameterized controller and devising linear constraints with respect to a desired open-loop transfer function.  A frequency-domain approach for computing low-order multivariable linearly parameterized controllers is presented in \cite{SOW10}. The $\mathcal{H}_{\infty}$ constraints are convexified around an initial stabilizing controller. An iterative algorithm is used that converges to a local optimal solution of the non-convex problem. However, in \cite{HAB13},  a convex-concave approximation of the $\mathcal{H}_{\infty}$ constraint is used which is based on an initial stabilizing controller. The extension of this method to design multivariable PID controllers for stable systems is presented in \cite{BHA16}. This method uses the same convex approximation as in  \cite{SOW10} but is limited to stable systems and PID structure. More recent works that implement an iterative loop-shaping method that ensures $\mathcal{H}_{\infty}$ performance have been devised in \cite{UYY16} and \cite{KK16}. These methods use the concepts from \cite{BHA16} to linearize non-convex constraints around an operating point. 
 
-In the works asserted above, it has been proved that a convex approximation of the $\mathcal{H}_{\infty}$ problem yields favorable results; however, these approximations do not yield the true global optimal solution to the $\mathcal{H}_{\infty}$ problem. This paper presents an extension of the work in \cite{KNZ16}, and its purpose is to devise a new frequency-domain approach for obtaining the optimal solution to the $\mathcal{H}_{\infty}$ problem. In \cite{KNZ16}, it was shown that the optimal solution is obtained when the order of the controller increases to infinity; in the proposed method, the optimal solution can be obtained for a fixed low-order controller (which has desirable practical implications). A nonlinear optimization problem is formulated to guarantee stability of the closed-loop system while ensuring robust performance (without any approximation). Additionally, it will be shown that the proposed method produces a solution that converges to the global optimal solution of the $\mathcal{H}_{\infty}$ problem under certain conditions. A preset frequency grid will be used to satisfy the robust performance condition and solve for a finite number of constraints. It is desired to compare the solutions produced from the convex optimization algorithms in \cite{KNZ16} with the proposed algorithm and correlate the . 
+In some of the works asserted above, it has been proved that a convex approximation of the $\mathcal{H}_{\infty}$ problem yields favorable results; however, these approximations do not yield the true global optimal solution to the $\mathcal{H}_{\infty}$ problem. This paper presents an extension of the work in \cite{KNZ16}, and its purpose is to devise a new frequency-domain approach for obtaining the optimal solution to the $\mathcal{H}_{\infty}$ problem. In \cite{KNZ16}, it was shown that the optimal solution is obtained when the order of the controller increases to infinity; in the proposed method, the optimal solution can be obtained for a fixed low-order fully-parameterized controller (which has desirable practical implications). A nonlinear optimization problem is formulated to guarantee stability of the closed-loop system while ensuring robust performance (without any approximation). Additionally, it will be shown that the proposed method produces a solution that converges to the global optimal solution of the $\mathcal{H}_{\infty}$ problem under certain conditions. A preset frequency grid will be used to satisfy the robust performance condition and solve for a finite number of constraints. It is desired to compare the solutions produced from the convex optimization algorithms in \cite{KNZ16} with the proposed algorithm and correlate the results. 
  
-This paper is organized as follows: In Section \ref{sec:pre}, the class of models, controllers and control objectives are defined. Section \ref{sec:problem_form} will address the conditions required for robust performance and the optimization methods used to obtain a solution to the $\mathcal{H}_{\infty}$ problem. Section \ref{sec:sim} will demonstrate the effectiveness of the proposed method and establish the efficacy for the convex approximation of the $\mathcal{H}_{\infty}$ criterion. Finally the concluding remarks are given in Section \ref{sec:conclusion}.
+This paper is organized as follows: In section \ref{sec:pre}, the class of models and controllers are defined. Section \ref{sec:problem_form} will address the control objectives and the conditions required for robust performance; an optimization problem will be formulated to obtain a solution to the $\mathcal{H}_{\infty}$ problem. Section \ref{sec:sim} will demonstrate the effectiveness of the proposed method and establish the efficacy for the convex approximation of the $\mathcal{H}_{\infty}$ criterion. Finally the concluding remarks are given in Section \ref{sec:conclusion}.
 
 \textbf{Notation}: In order to avoid the risk of any confusion, the notation for the symbols employed in this paper will be defined here. Bolded symbols will represent vectors.
 \begin{align*}
@@ -86,7 +86,7 @@ z &: \ \parbox[t]{18em}{complex frequency variable used to represent discrete-ti
 
 \section{Preliminaries} \label{sec:pre}
 \subsection{Class of Models}
-The set of all linear time-invariant (LTI) single-input-signal-output (SISO) stable strictly proper models belonging to the family of perturbed plants with multiplicative uncertainty can be defined as follows:
+The set of all linear time-invariant (LTI) single-input-signal-output (SISO) strictly proper models belonging to the family of perturbed plants with multiplicative uncertainty can be defined as follows:
 \begin{equation}\label{eq:uncert_set}
 \mathcal{G} = \{ G_p(s)[1+\Delta_p(s) W_{2_{p}}(s)]; \quad p=1,\ldots,q\}
 \end{equation}  
@@ -111,7 +111,7 @@ where $\bm{\rho}_x \in \mathbb{R}^{n_x}$, $\bm{\rho}_y \in \mathbb{R}^{n_y}$, an
 \begin{equation} \label{eq:Laguerre}
 \phi_{\{x,y\}_1}(s)=1,\quad \phi_{\{x,y\}_q}(\bm{\rho},s) = \frac{\sqrt{2 \rho_c}(s-\rho_c)^{q-2}}{(s+\rho_c)^{q-1}}
 \end{equation}
-for $q = 2,\ldots,n$, where $\rho_c \in \mathbb{R}_+$. For discrete-time systems, the Laguerre basis function can be expressed as follows:
+for $q = 2,\ldots,\{n_x,n_y\}$, where $\rho_c \in \mathbb{R}_+$. For discrete-time systems, the Laguerre basis function can be expressed as follows:
 \begin{equation} \label{eq:Laguerre_z}
 \phi_{\{x,y\}_1}(z)=1,\quad \phi_{\{x,y\}_q}(\bm{\rho},z) = \frac{\rho_d^*(1-\rho_d z)^{q-2}}{(z-\rho_d)^{q-1}}
 \end{equation}
@@ -141,7 +141,7 @@ S(s) &:= e/r =[1+L(\bm{\rho},s)]^{-1} \\ &=  M(s)Y(\bm{\rho},s)[N(s)X(\bm{\rho},
 T(s) &:= y/r =L(\bm{\rho},s)[1+L(\bm{\rho},s)]^{-1} \\ &=  N(s)X(\bm{\rho},s)[N(s)X(\bm{\rho},s)+M(s)Y(\bm{\rho},s)]^{-1}\\
 \end{aligned}
 \end{equation}
-where $L(s) = G(s)K(s)$; $r$ is the reference input; $y$ is the system output; $e$ is the tracking error signal (i.e., $e = r-y$). From the above definitions of the sensitivity functions, it can be observed that $S(s)+T(s)=1$.
+where $L(\bm{\rho},s) = G(s)K(\bm{\rho},s)$; $r$ is the reference input; $y$ is the system output; $e$ is the tracking error signal (i.e., $e = r-y$). From the above definitions of the sensitivity functions, it can be observed that $S(s)+T(s)=1$.
 
 \subsection{Robust Performance via Convex Optimization}
 Consider a process from the multiplicative uncertainty set in (\ref{eq:uncert_set}). Given a performance weighting filter $W_1(s)$ with bounded infinity norm, a necessary and sufficient condition for achieving robust performance is given by \cite{DFT92}:
@@ -163,7 +163,6 @@ where $\Omega \in [0,\infty)$. For notation purposes, the dependence in $j\omega
 \caption{Graphical interpretation of the $\mathcal{H}_\infty$ robust performance constraint in the complex plane.}
 \label{fig:circle}
 \end{figure}
-
 where $\psi(\bm{\rho}) = NX(\bm{\rho})+MY(\bm{\rho})$. Consider a circle in the complex plane at a specific frequency in $\Omega$ which is centered at $\psi(\bm{\rho})$ and has radius $\gamma^{-1}\left[ |W_1MY(\bm{\rho})| + |W_2 NX(\bm{\rho})| \right]$ (as shown in Fig.~\ref{fig:circle}). The constraint in (\ref{eq:circle}) ensures that for any frequency point in $\Omega$, the circle associated with this frequency point will not encircle the origin. In \cite{KNZ16}, the authors show that there exists a function $F(s)$ that can rotate this circle such that it lies on the right-hand side of the $j\omega$ axis of the complex plane (i.e., all values on and within the circle have positive real parts). This condition is recalled with the following Lemma:
 
 \begin{lemma}   \label{lem1}
@@ -196,9 +195,9 @@ With the above Lemma, a necessary and sufficient condition can be derived for at
 & & & \forall \omega \in \Omega \quad 
 \end{aligned}
 \end{equation}
-Notice that (\ref{eq:convex_con}) is a semi-infinite programming (SIP) optimization problem since there are a finite number of optimization variables and an infinite number of constraints. This problem can be solved by presetting a frequency grid $\omega$ and solving a finite number of constraints. This frequency grid can be predefined in a variety of manners (see \cite{SVBB11}, \cite{GKL10b}).
+Notice that (\ref{eq:convex_con}) is a semi-infinite programming (SIP) optimization problem since there are a finite number of optimization variables and an infinite number of constraints. This problem can be solved by presetting a frequency grid $\omega$ and solving a finite number of constraints. This frequency grid can be predefined in a variety of manners (see \cite{SVBB11}, \cite{GKL10b}, and \cite{FR05}).
 
-\subsection{Optimal Performance via Nonlinear Programming}
+\subsection{Optimal $\mathcal{H}_{\infty}$ Performance}
 In \cite{KNZ16}, it is shown that when the orders of $X(\bm{\rho})$ and $Y(\bm{\rho})$ approach infinity, then $\gamma$ from (\ref{eq:convex_con}) approaches the optimal solution to the $\mathcal{H}_{\infty}$ problem. However, it is impractical and sometimes impossible to implement large order controllers in a real system.
 
 One solution to this problem is to find the optimal solution for a fixed low-order controller. According to Lemma \ref{lem1}, it is known that there exists a stable transfer function $F$ such that the constraint to the $\mathcal{H}_{\infty}$ problem is satisfied. Therefore, the optimal solution to this problem can be accomplished by fixing the orders of $X(\bm{\rho})$ and $Y(\bm{\rho})$ and implementing the following optimization problem:
@@ -214,7 +213,9 @@ where $F(\bm{\rho})$ can be chosen such that it incorporates the Laguerre basis 
 \begin{equation} \label{eq:Laguerre_sum_c}
 F(\bm{\rho}) = \rho_{f_{1}}+ \sum_{p=2}^{q} \rho_{f_{p}}\frac{\sqrt{2 \rho_o}(s-\rho_o)^{p-2}}{(s+\rho_o)^{p-1}}
 \end{equation}
-where $\rho_o \in \mathbb{R}_+$. It will now be shown that the solution to the optimization problem in (\ref{eq:opt_true}) converges to the optimal solution of the $\mathcal{H}_\infty$ problem as the order of $F(\bm{\rho})$ increases. The proof will omit the dependence on $\bm{\rho}$ since the result is independent on the parameterization of the basis functions.
+where $\rho_o \in \mathbb{R}_+$. It should be noted that the optimal solution to the $\mathcal{H}_\infty$ problem is achieved when $K(\bm{\rho}) = X(\bm{\rho})Y^{-1}(\bm{\rho})$ has the same structure as the optimal controller. However, if the structure of the optimal controller is unknown a priori, then one can simply fix the order of the basis $F(\bm{\rho})$ and vary the orders of the controllers $X(\bm{\rho})$ and $Y(\bm{\rho})$ until $\gamma$ converges to a constant value. The concept of this method will be shown in one of the examples in section \ref{sec:sim}.
+
+It will now be shown that the solution to the optimization problem in (\ref{eq:opt_true}) converges monotonically to the optimal solution of the $\mathcal{H}_\infty$ problem as the order of $F(\bm{\rho})$ increases. The proof will omit the dependence on $\bm{\rho}$ since the result is independent on the parameterization of the basis functions.
 
 \begin{theorem} \label{thm_1}
 Suppose that the controller $K_o(s)$ achieves the optimal $\mathcal{H}_\infty$ robust performance condition for the plant model $G(s) = N(s)M^{-1}(s)$ such that
@@ -252,7 +253,7 @@ From this relation, it can be deduced that $\lim_{n \to \infty} |F_n^*| \rightar
 \begin{equation}
 \lim_{n \to \infty} |\gamma_o - \gamma_n^*|  = 0
 \end{equation}
-However, $\gamma_n$ (the solution to the optimization problem in (\ref{eq:opt_true})) is always less than or equal to $\gamma_n^*$ and greater that the optimal solution $\gamma_o$ if the structures of $X$ and $Y$ are the same as $X_o$ and $Y_o$, respectively. Therefore, $\gamma_n$ converges from above to $\gamma_o$, and this convergence is monotonic because the basis functions $F_n$ of order $n$ are a subset of those of order $n+1$, which ensures that $\gamma_{n+1} \leq \gamma_n$.
+However, $\gamma_n$ (the solution to the optimization problem in (\ref{eq:opt_true})) is always less than or equal to $\gamma_n^*$ and greater that the optimal solution $\gamma_o$ if the structures of $X$ and $Y$ are the same as $X_o$ and $Y_o$, respectively (which is the case, as postulated in the Theorem). Therefore, $\gamma_n$ converges from above to $\gamma_o$, and this convergence is monotonic because the basis functions $F_n$ of order $n$ are a subset of those of order $n+1$, which ensures that $\gamma_{n+1} \leq \gamma_n$.
 {\hfill \ensuremath{\blacksquare}}
 
 Note that the constraint in the optimization problem (\ref{eq:opt_true}) is not convex and a non-linear optimization algorithm will need to be implemented in order to solve this problem. In this manner, the parameter $\rho_o$ in $F(\bm{\rho})$ need not be fixed, and the optimal solution can be obtained for a lower-order $F(\bm{\rho})$ (as will be demonstrated in subsequent sections of this paper).
@@ -327,7 +328,7 @@ The optimal values of $\theta_c$ may vary depending on the problem that is being
 Let us now consider several examples in order to determine the validity of the proposed method. For each example, the \texttt{MATLAB} software was used in conjunction with the \texttt{fmincon} function to solve the proposed optimization problem. 
 
 \subsection{Example 1: Convergence to Optimal Solution}
-Consider the following discrete time SISO system:
+Consider the following discrete time SISO system (with a sampling time of $T_s = 1s$):
 \begin{equation}
 G(z) = \frac{z-0.186}{z^3 - 1.116z^2 + 0.465z-0.093}
 \end{equation}
@@ -342,7 +343,7 @@ W_1(z) = \frac{0.4902(z^2-1.0431z+0.3263)}{(z-1)(z-0.282)}
 For this controller synthesis, we can simply select the basis functions in (\ref{eq:Laguerre_z}) to be FIR filters (i.e., $\rho_d = 0$) for $X(\bm{\rho})$ and $Y(\bm{\rho})$. In order to avoid unboundedness of $W_1$ at $\omega = 0$ and have integral action, the basis functions for $Y(\bm{\rho})$ will be multiplied by $(z-1)/z$. It will be shown that as the order of $F(\bm{\rho})$ increases, the optimal solution $\gamma$ will decrease monotonically and converge to the optimal solution. 
 
 \subsubsection{Simulation Results}
-The \texttt{mixsyn} command from \texttt{MATLAB}'s Robust Control toolbox yields an optimal value of $\gamma^* = 0.5522$ with a fifth-order controller. Therefore, according to Theorem.\ref{thm_1}, a fifth-order controller was also implemented with the proposed method (i.e., to ensure convergence to the optimal solution). Additionally, two simulations were performed with the proposed method; one simulation with $F(\bm{\rho})$ selected such that the basis function is an FIR filter (i.e., Laguerre basis functions in (\ref{eq:Laguerre_z}) with $\rho_d = 0$) and one simulation with $F(\bm{\rho})$ selected such that $\rho_d$ is a decision variable.  Let $\gamma_{n_f}$ denote the optimal solution of the nominal performance condition for a given $n_f$-th order of $F(\bm{\rho})$. Figure.~\ref{fig:ex1_1} shows the convergence of the optimal solution $\gamma_{n_f}$ as a function $n_f$; it can be observed that with the proposed frequency-domain method, the optimal solution to the $\mathcal{H}_{\infty}$ problem converges monotonically as the order of $F(\bm{\rho})$ increases. Additionally, when the parameter $\rho_d$ is a decision variable, the convergence time is reduced. 
+The \texttt{mixsyn} command from \texttt{MATLAB}'s Robust Control toolbox yields an optimal value of $\gamma^* = 0.5522$ with a 5\textsuperscript{th} order controller. Therefore, according to Theorem.\ref{thm_1}, a 5\textsuperscript{th} order controller was also implemented with the proposed method (i.e., to ensure convergence to the optimal solution). Additionally, two simulations were performed with the proposed method; one simulation with $F(\bm{\rho})$ selected such that the basis function is an FIR filter (i.e., Laguerre basis functions in (\ref{eq:Laguerre_z}) with $\rho_d = 0$) and one simulation with $F(\bm{\rho})$ selected such that $\rho_d$ is a decision variable.  Let $\gamma_{n_f}$ denote the optimal solution of the nominal performance condition for a given $n_f$-th order of $F(\bm{\rho})$. Figure.~\ref{fig:ex1_1} shows the convergence of the optimal solution $\gamma_{n_f}$ as a function $n_f$; it can be observed that with the proposed frequency-domain method, the optimal solution to the $\mathcal{H}_{\infty}$ problem converges monotonically as the order of $F(\bm{\rho})$ increases. Additionally, when the parameter $\rho_d$ is a decision variable, the convergence time is reduced. 
 
 \begin{figure}
 \centering
@@ -351,7 +352,7 @@ The \texttt{mixsyn} command from \texttt{MATLAB}'s Robust Control toolbox yields
 \label{fig:ex1_1}
 \end{figure}
 
-Note that the controller order was fixed in this case study, since it was known (from the \texttt{mixsyn} command) that the optimal controller order was $5$. However, suppose that the order and structure of the optimal controller $K = XY^{-1}$ was unknown. In this case, one can simply fix the structure of the basis function of $F(\bm{\rho})$ with a large order and solve the optimization problem as the order of the controller is varied. The lowest order controller that achieves convergence can then be selected as the optimal controller. Let $n_k$ denote the order of the controller $K(\bm{\rho})$ and $\gamma_{n_k}$ the optimal solution to the $\mathcal{H}_{\infty}$ problem for a given $n_k$. Figure.~\ref{fig:ex1_2} shows the convergence to the optimal solution when the order of the basis function $F(\bm{\rho})$ is fixed to $20$ (with $F(\bm{\rho})$ selected as an FIR filter) and the controller order $n_k$ is varied; it can be observed that convergence to the optimal solution does indeed occur with a 5\textsuperscript{th}  order controller. In fact, according to Fig.~\ref{fig:ex1_2}, a 3\textsuperscript{rd} order controller generates the performance similar to that of the 5\textsuperscript{th} order optimal controller that \texttt{MATLAB}'s Robust Control toolbox provides. 
+Note that the controller order was fixed in this case study, since it was known (from the \texttt{mixsyn} command) that the optimal controller order was $5$. However, suppose that the order and structure of the optimal controller $K_o = X_oY_o^{-1}$ was unknown. In this case, one can simply fix the structure of the basis function of $F(\bm{\rho})$ with a large order and solve the optimization problem as the order of the controller is varied. The lowest order controller that achieves convergence can then be selected as the optimal controller. Let $n_k$ denote the order of the controller $K(\bm{\rho})$ and $\gamma_{n_k}$ the optimal solution to the $\mathcal{H}_{\infty}$ problem for a given $n_k$. Figure.~\ref{fig:ex1_2} shows the convergence to the optimal solution when the order of the basis function $F(\bm{\rho})$ is fixed to $20$ (with $F(\bm{\rho})$ selected as an FIR filter) and the controller order $n_k$ is varied; it can be observed that convergence to the optimal solution does indeed occur with a 5\textsuperscript{th}  order controller. In fact, according to Fig.~\ref{fig:ex1_2}, a 3\textsuperscript{rd} order controller generates the performance similar to that of the 5\textsuperscript{th} order optimal controller that \texttt{MATLAB}'s Robust Control toolbox provides. 
 
 \begin{figure}
 \centering
@@ -377,7 +378,7 @@ N(\bm{\rho},s) = \frac{s-1}{(s+\rho_g)^2}, \quad M(\bm{\rho},s) = \frac{(s^2+0.8
 \end{equation}
 where $\rho_g \in \mathbb{R}_+$. For a PID controller, the structure of the controllers $X(\bm{\rho})$ and $Y(\bm{\rho})$ can be selected as those defined in (\ref{eq:pid_2}) with $T_f = 0.01$. 
 \subsubsection{Simulation Results}
-The problem in (\ref{eq:opt_true}) is solved by converting it to an SDP problem and gridding the frequency from $10^{-3}$ to $10^{3} \ rad/s$ (using $500$ logarithmically spaced points). A $20$-th order basis function for $F(\bm{\rho})$ is selected (as defined in (\ref{eq:Laguerre_sum_c})). For comparative purposes, the \texttt{MATLAB} \texttt{mixsyn} function from the Robust Control Toolbox is used to compute a controller with the given weighting filters; the toolbox yields a $4$-th order controller. 
+The problem in (\ref{eq:opt_true}) is solved by converting it to an SDP problem and gridding the frequency from $10^{-3}$ to $10^{3} \ rad/s$ (using $500$ logarithmically spaced points). A $20$-th order basis function for $F(\bm{\rho})$ is selected (as defined in (\ref{eq:Laguerre_sum_c})). For comparative purposes, the \texttt{MATLAB} \texttt{mixsyn} function from the Robust Control Toolbox is used to compute a controller with the given weighting filters; the toolbox yields a 4\textsuperscript{th} order controller. 
 
 Table.\ref{tab:ex2_1} shows the values of the optimal solutions obtained from various methods\footnote{The method proposed in \cite{Zhe10} produced a set of PID controllers. A random solution from the set was used for comparative purposes.}. The convex problem in (\ref{eq:convex_con}) was solved with $\rho_g = \rho_c^{\prime} = 1$. Since \texttt{mixsyn} minimizes $\|[W_1S \ \ W_2T] \|_\infty$, it can be observed that a smaller value of this criteria is obtained (with a $4$-th order controller). However, with a simple PID controller, the proposed method yields the best performance for the \textit{true} robust performance criteria in (\ref{eq:inf_norm}). The optimal value for the the decision variable of $F(\bm{\rho})$ was obtained as $\rho_o^{\star} = 0.933$, while the optimal values of the remaining decision variables (for both the convex and proposed optimization methods) are shown in Table.\ref{tab:ex2_2}. 
 
@@ -396,7 +397,7 @@ Table.\ref{tab:ex2_1} shows the values of the optimal solutions obtained from va
 
 \begin{table}[]
 \centering
-\caption{Optimal values of PID controllers obtained from the convex and nonlinear optimization problems}
+\caption{Optimal values of PID controllers obtained from the convex and proposed optimization problems}
 \label{tab:ex2_2}
 \begin{tabular}{c|c|cccc}
                                                           & $\rho_1^{\star}$ & $\rho_2^{\star}$              & $\rho_3^{\star}$              & $\rho_g^{\star}$             & $(\rho_c^{\prime})^{\star}$ \\ \hline
@@ -437,13 +438,13 @@ For this problem, the control objective is to minimize $\gamma$ and satisfy the 
 \begin{equation} \label{eq:mixed_syn}
 \|W_1S_{\ell} \|_{\infty} < \gamma \quad \mbox{and} \quad \|W_2T_{\ell} \|_{\infty} < \gamma
 \end{equation}
-for ${\ell} = 0,\ldots,6$. Note that this control objective satisfies the mixed sensitivity robust condition, and not the robust performance condition in (\ref{eq:inf_norm}). The $\mu$-synthesis approach in the \texttt{MATLAB} Robust Control Toolbox uses this criteria to design a controller. In this approach, a multiplicative uncertainty is considered and an appropriate weighting filter is designed to ensure that the condition in (\ref{eq:mixed_syn}) is satisfied for all seven models. The controller produced by \texttt{MATLAB} with this $\mu$-synthesis approach yields an $18$-th order controller and satisfies the control objective for all models. 
+for ${\ell} = 0,\ldots,6$. Note that this control objective satisfies the mixed sensitivity robust condition, and not the robust performance condition in (\ref{eq:inf_norm}). The $\mu$-synthesis approach in the \texttt{MATLAB} Robust Control Toolbox uses this criteria to design a controller. In this approach, a multiplicative uncertainty is considered and an appropriate weighting filter is designed to ensure that the condition in (\ref{eq:mixed_syn}) is satisfied for all seven models. The controller produced by \texttt{MATLAB} with this $\mu$-synthesis approach yields an 18\textsuperscript{th} order controller and satisfies the control objective for all models. 
 
 The same problem is now solved using the proposed approach. First, the coprime factors $N_{\ell}(s)$ and $M_{\ell}(s)$ for ${\ell} = 0,\ldots,6$ must be established. Since each model is unstable, then each coprime factor must be selected such that $\{N_{\ell}(s),M_{\ell}(s) \}  \in \mathscr{P}$ for all ${\ell}$. A simple choice is to divide both the numerator and denominator of each model by a factor $(s+\rho_p)^{\lambda_{\ell}}$, where $\rho_p \in \mathbb{R}_+$ and ${\lambda_{\ell}}$ is the largest degree of the denominator of the $\ell$-th respective plant model. For example, the coprime factors for the plant $G_2(s)$ can be formed as follows:
 \begin{equation}
 N_2(s) = \frac{2 \cdot 50^2 }{(s+\rho_p)^3}, \ M_2(s) = \frac{(s-2)(s^2+10s+50^2) }{(s+\rho_p)^3}
 \end{equation}
-From these relations, it is evident that $G_2(s) = N_2(s)M_2^{-1}(s)$. To further simplify the design, the same $\rho_p$ can be selected for each $\ell$-th coprime. To solve the convex optimization problem in (\ref{eq:convex_con}), $\rho_p$ must be fixed a priori; however, with the proposed method, $\rho_p$ need not be fixed. 
+From these relations, it is evident that $G_2(s) = N_2(s)M_2^{-1}(s)$. To further simplify the design, the same $\rho_p$ can be selected for each $\ell$-th coprime. To solve the convex optimization problem proposed in \cite{KNZ16}, $\rho_p$ must be fixed a priori; however, with the proposed method, $\rho_p$ need not be fixed. 
 
 The optimization problem (with the proposed approach) for the mixed $\mathcal{H}_\infty$ criteria in (\ref{eq:mixed_syn}) can be formulated as follows:
 \begin{equation} \label{eq:opt_true_ex3}
@@ -462,14 +463,12 @@ where $\psi_{\ell} = N_{\ell}(\bm{\rho})X(\bm{\rho}) + M_{\ell}(\bm{\rho})Y(\bm{
 \subsubsection{Simulation Results}
 The problem in (\ref{eq:opt_true_ex3}) is converted to a SDP problem by considering a logarithmically spaced frequency grid with $Q$ = $200$ points from $\omega_1 = 10^{-3} \: rad/s$ to $\omega_{200} = 10^{4} \: rad/s$. For the convex problem, a $6$-th order controller ($5$-th order controller with one integrator) will be designed by using the Laguerre basis functions defined in (\ref{eq:Laguerre}) with $\rho_c = 20$ and $\rho_p = 100$ (as defined in \cite{KNZ16}). With the proposed method (and for comparative purposes), a $6$-th order controller will also be used while a $20$-th order Laguerre basis function will be considered for $F(\bm{\rho})$ (as defined in (\ref{eq:Laguerre_sum_c})). 
 
-The optimal solutions from several optimization algorithms for satisfying the criteria in (\ref{eq:mixed_syn}) are tabulated in Table.\ref{tab:ex3} (where $n$ is the controller order of the respective method). The table also shows the solutions when the convex optimization problem in \cite{KNZ16} is solved when the variables $\rho_c$ and $\rho_p$ are decision variables (thus making the problem non-convex). It can be observed that the proposed method produces the best performance. 
-
 \begin{table}[]
 \centering
 \caption{Comparison of optimal solutions}
 \label{tab:ex3}
 \begin{tabular}{c|c|c|c|c||c}
-                                                                              & \begin{tabular}[c]{@{}c@{}} $n$ \end{tabular} & $\rho_c$ & $\rho_p$ & $\rho_o$ & $\gamma$ \\ \hline
+                                                                              & \begin{tabular}[c]{@{}c@{}} $n$ \end{tabular} & $\rho_c^{\star}$ & $\rho_p^{\star}$ & $\rho_o^{\star}$ & $\gamma^{\star}$ \\ \hline
 \texttt{MATLAB} $\mu$-Synthesis                                               & $18$                                                        & $-$      & $-$      & $-$      & $1.024$  \\ \hline       
                                                                       
 \begin{tabular}[c]{@{}c@{}}Algorithm in \cite{KNZ16} \\ (Convex) \end{tabular}   & $6$                                                         & $20$    & $100$     & $-$      & $0.881$  \\ \hline
@@ -480,7 +479,18 @@ Proposed method                                                               & 
 \end{tabular}
 \end{table}
 
+The optimal solutions from several optimization algorithms for satisfying the criteria in (\ref{eq:mixed_syn}) are tabulated in Table.\ref{tab:ex3} (where $n$ is the controller order of the respective method). The table also shows the solutions when the convex optimization problem in \cite{KNZ16} is solved when the variables $\rho_c$ and $\rho_p$ are decision variables (thus making the problem non-convex). It can be observed that the proposed method produces the best performance. 
+
 Figure.~\ref{fig:ex3_1} shows the step response of $S(s)$ (disturbance response) for all seven models using the convex optimization algorithm, while Figure.~\ref{fig:ex3_2} shows the step response of $S(s)$ using the proposed method. It can be observed that the proposed method produces shorter settling times and reduced overshoot. 
+
+\begin{remark*}
+The $\mu$-synthesis approach by \texttt{MATLAB} introduces some conservatism in determining the optimal controller. Additionally, with the $\mu$-synthesis approach, the plant $G_4(s)$ was approximated with a first-order Pade function, since pure delay's cannot be used for synthesis. In the proposed approach, the true delay function can be considered in the design while eliminating the conservatism associated with modeling the multi-model uncertainties. 
+\end{remark*}
+
+
+
+
+
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{../pics/step_multi_convex.eps}
@@ -495,13 +505,9 @@ Figure.~\ref{fig:ex3_1} shows the step response of $S(s)$ (disturbance response)
 \label{fig:ex3_2}
 \end{figure}
 
-\begin{remark*}
-The $\mu$-synthesis approach by \texttt{MATLAB} introduces some conservatism in determining the optimal controller. Additionally, with the $\mu$-synthesis approach, the plant $G_4(s)$ was approximated with a first-order Pade function, since pure delay's cannot be used for synthesis. In the proposed approach, the true delay function can be considered in the design while eliminating the conservatism associated with modeling the multi-model uncertainties. 
-\end{remark*}
-
 
 \section{Conclusion} \label{sec:conclusion}
-A frequency-domain approach has been implemented in order to design robust controllers that achieve $\mathcal{H}_{\infty}$ performance. With the proposed method, it has been shown that the solution to the $\mathcal{H}_{\infty}$ problem converges monotonically to the optimal solution when the order of the basis function $F$ approaches infinity. This solution is obtained by considering an optimization problem which guarantees the stability of the closed-loop system. The optimization problem is converted from an SIP problem to an SDP problem by gridding the frequency vector over a finite interval. The simulation examples show that the proposed approach achieves the optimal performance for a given controller order without any conservatism. For future work, it will be desired to implement this method for multi-input-multi-output (MIMO) systems and systems with controllers that possess multiple degrees-of-freedom.  
+A frequency-domain approach has been implemented in order to design robust controllers that achieve optimal $\mathcal{H}_{\infty}$ performance. With the proposed method, it has been shown that the solution to the $\mathcal{H}_{\infty}$ problem converges monotonically to the optimal solution when the order of the basis function $F$ approaches infinity. This solution is obtained by considering an optimization problem which guarantees the stability of the closed-loop system. The optimization problem is converted from an SIP problem to an SDP problem by gridding the frequency vector over a finite interval. The simulation examples show that the proposed approach achieves the optimal performance for a given controller order without any conservatism. Although the proposed approach does yield the best solution for the robust performance condition, it should be emphasized that the convex problem proposed in \cite{KNZ16} generates a solution that is comparable with the methods proposed in this paper. For future work, it will be desired to implement this method for multi-input-multi-output (MIMO) systems and systems with controllers that possess multiple degrees-of-freedom.  
 
 \bibliography{linear}
 

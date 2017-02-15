@@ -64,7 +64,7 @@
 \pagestyle{empty}
 
 \begin{abstract}                % Abstract of not more than 250 words.
-A new loop-shaping data-driven approach is presented for synthesizing controllers for the CERN power converter control system. This method uses the frequency response function (FRF) of a system in order to avoid the problem of unmodeled dynamics associated with parametric models. For this particular application, it is shown that a convex optimization problem can be formulated (in either the $H_\infty$ or $H_2$ sense) to shape the closed-loop FRF while guaranteeing the closed-loop stability. This optimization problem is realized by linearizing a non-convex constraint around a stabilizing operating point. The effectiveness of the method is illustrated by designing a controller for the SATURN power converter which is used in the Large Hadron Collider, in injector machines, and for pulsed applications at CERN. Experimental validation in the time domain is also presented. 
+A new loop-shaping data-driven approach is presented for synthesizing controllers for the CERN power converter control system. This method uses the frequency response function (FRF) of a system in order to avoid the problem of unmodeled dynamics associated with parametric models. For this particular application, it is shown that a convex optimization problem can be formulated (in either the $H_\infty$ or $H_2$ sense) to shape the closed-loop FRF while guaranteeing the closed-loop stability. This optimization problem is realized by linearizing a non-convex constraint around a stabilizing operating point. The effectiveness of the method is illustrated by designing a controller for the SATURN power converter which is used in the Large Hadron Collider, in injector machines, and for pulsed applications at CERN. Experimental validation in the frequency-domain is also presented. 
 \end{abstract}
 
 
@@ -74,9 +74,9 @@ Today's industrial processes pose challenging problems to control engineers due 
 
 Data-driven controllers can be synthesized either on-line or off-line; the on-line methods such as the classical direct adaptive control (MRAC) \cite{LLMK11}, model-free adaptive control (MFAC) \cite{HJ13}, and the unfalsified control (UC) \cite{ST97} methodologies design controllers using time-domain data. Iterative feedback tuning (IFT) \cite{Hja02}, correlation-based tuning (CBT) \cite{KMB02a}, virtual reference feedback tuning (VRFT) \cite{CLS02}, non-iterative data-driven model reference control \cite{KVB07} methodologies are all off-line time-domain data-driven methods.  The widely used PID controller are usually tuned based on a set of time-domain or frequency-domain data. 
 
-Frequency-domain based controller synthesis methods are design schemes that continue to spark the interest of many researchers. The authors in \cite{KNND13b} establish a robust frequency-domain controller design methods that requires a solution to a non-linear optimization problem. A frequency-domain loop-shaping method for fixed-structure controllers is proposed in \cite{KNND13c}; however, stability is not guaranteed with this method and must be verified a posteriori. Controller synthesis methods belonging to the $\mathcal{H}_{\infty}$ control framework minimizes the $\mathcal{H}_{\infty}$ norm of a weighted closed-loop sensitivity function. A convex optimization approach is used to design linearly-parameterized (LP) controllers with loop shaping and $\mathcal{H}_{\infty}$ performance in \cite{KG10}. This method is extended to multiple-input multiple-output (MIMO) systems for computing decoupling LP-MIMO controllers in \cite{GKL10b}. In \cite{NK14}, this method of designing LP controllers was further extended to MIMO systems with delay. Recently, the necessary and sufficient conditions for the existence of $\mathcal{H}_{\infty}$ controllers for SISO systems represented by their frequency response has been proposed in \cite{KNZ16}.
+Frequency-domain based controller synthesis methods are design schemes that continue to spark the interest of many researchers. The authors in \cite{KNND13b} establish a robust frequency-domain controller design method that requires a solution to a non-linear optimization problem. A frequency-domain loop-shaping method for fixed-structure controllers is proposed in \cite{KNND13c}; however, stability is not guaranteed with this method and must be verified a posteriori. Controller synthesis methods belonging to the $\mathcal{H}_{\infty}$ control framework minimizes the $\mathcal{H}_{\infty}$ norm of a weighted closed-loop sensitivity function. A convex optimization approach is used to design linearly-parameterized (LP) controllers with loop shaping and $\mathcal{H}_{\infty}$ performance in \cite{KG10}. This method is extended to multiple-input multiple-output (MIMO) systems for computing decoupling LP-MIMO controllers in \cite{GKL10b}. In \cite{NK14}, this method of designing LP controllers was further extended to MIMO systems with delay. Recently, the necessary and sufficient conditions for the existence of $\mathcal{H}_{\infty}$ controllers for SISO systems represented by their frequency response has been proposed in \cite{KNZ16}.
 
-The proposed method in this paper invokes a new data-driven control design scheme for a specific power converter application at CERN. Currently, the load (i.e., the magnet of the particle accelerator) is approximated as a simple first-order system (series $RL$ circuit); however, as shown in \cite{GB65}, the parameters of the magnet are frequency dependent. Additionally, it has been shown in \cite{KZ98} that the vacuum chamber of the magnet is also frequency dependent (due to the skin depth effect and the chamber geometry). Therefore, it is appropriate to consider a data-driven based design to regulate the power converter control system.  In this work, it is shown that a loop-shaping design in the $\mathcal{H}_\infty$ or $\mathcal{H}_2$ sense can be formulated through a convex optimization problem; however, the methods described in this paper can also be applied to mixed $\mathcal{H}_2$ and $\mathcal{H}_\infty$ problems (i.e., minimizing the norm of weighted sensitivity functions). Additionally, with certain conditions on the controller parameters, it is shown that the closed-loop stability is guaranteed. 
+The proposed method in this paper invokes a new data-driven control design scheme for a specific power converter application at CERN. Currently, the load (i.e., the magnet of the particle accelerator) is approximated as a simple first-order system (series $RL$ circuit); however, it has been shown in \cite{KZ98}, \cite{NW95} and \cite{NS79} that the vacuum chamber of the magnet is also frequency dependent (mainly due to the coupling effects of the beam and deformations in the chamber geometry). In fact, the authors in \cite{NW95} assert that even small deformations in the beam pipe can drastically change the impedance of the system and create stability issues. Therefore, it is appropriate to consider a data-driven based design to regulate the power converter control system.  In this work, it is shown that a loop-shaping design in the $\mathcal{H}_\infty$ or $\mathcal{H}_2$ sense can be formulated through a convex optimization problem; however, the methods described in this paper can also be applied to mixed $\mathcal{H}_2$ and $\mathcal{H}_\infty$ problems (i.e., minimizing the norm of weighted sensitivity functions). Additionally, with certain trivial conditions on the controller parameters, it is shown that the closed-loop stability is guaranteed. 
 
 The paper is organized as follows. The class of models represented by FRF's are addressed in section \ref{sec:prelim}. Section \ref{sec:system} discusses the framework of the power converter control system and its functionality at CERN. The main results and theoretical bases are addressed in section \ref{sec:main}; in this section, loop-shaping constraints are formulated for the power converter control system. Section \ref{sec:case} is dedicated to a case study where the effectiveness of the method is demonstrated by applying the proposed design scheme to a power converter control system for a specific accelerator requirement. Finally, the concluding remarks are given in section \ref{sec:conclusion}.
 
@@ -90,7 +90,7 @@ If the data is noisy, then $G\jo$ is characterized as the Empirical Transfer Fun
 \begin{equation}
 \mathcal{G} = \{G_l\jo; \quad l=1,\ldots,p; \quad \forall \omega \in \Omega\}
 \end{equation} 
-$\Omega \in [0,\infty)$. For simplicity, one model from the set $\mathcal{G}$ will be considered, and the subscript $l$ will be omitted. However, in general, the design procedures outlined in this paper can be applied to the multi-model case. 
+$\Omega \in [0,\infty)$. For simplicity, one model from the set $\mathcal{G}$ will be considered, and the subscript $l$ will be omitted. However, in general, the design procedures outlined in this paper can be applied to the multi-model case (as will be seen in the case study). 
 
 Additionally, for notation purposes, let us define $\mathscr{S}$ as the set of all strictly proper (stable) TF's and $\mathscr{P}$ as the set of all proper (stable) TF's. 
 
@@ -134,10 +134,10 @@ For the remaining theoretical portions of this document, the loop-shaping techni
 
 \section{Main Results}
 \label{sec:main}
-In this section, it will be demonstrated that the performance specification of the control problem will be achieved by formulating a convex optimization problem. The controllers will be synthesized by only considering the FRF of the system components.
+In this section, it will be demonstrated that the performance specification of the control problem will be achieved by formulating a convex optimization problem. The controllers will be synthesized by only considering the FRF of the system.
 
 \subsection{Convex Approximation}
-The type of optimization problem that will be considered in the paper will have the following form:
+The type of optimization problem that will be considered in this paper will have the following form:
 
 \begin{equation} \label{eq:con_cav}
 \begin{aligned}
@@ -146,7 +146,6 @@ The type of optimization problem that will be considered in the paper will have 
 & \text{subject to:} & & y(x)-z(x) < \gamma 
 \end{aligned}
 \end{equation}
-
 where $y(x)$ and $z(x)$ are both convex functions of $x$ and $\{ \gamma \in \mathbb{R} : \gamma > 0\}$. This type of problem is convex-concave (due to the $-z(x)$ term); one solution to convexify this problem is to linearize $z(x)$ around an operating point $x_0$ and obtain the following optimization problem:
 
 \begin{equation} \label{eq:con_lin}
@@ -156,25 +155,20 @@ where $y(x)$ and $z(x)$ are both convex functions of $x$ and $\{ \gamma \in \mat
 & \text{subject to:} & & y(x)-\bigl[ \nabla z(x_0) \bigr]^{\top} (x-x_0) < \gamma 
 \end{aligned}
 \end{equation}
-
- where $\nabla z(x_0)$ is the gradient of $z(x)$ evaluated at $x_0$. 
+where $\nabla z(x_0)$ is the gradient of $z(x)$ evaluated at $x_0$. 
  
 The control methodology in this paper is based on minimizing a control objective in the $\mathcal{H}_\infty$ or $\mathcal{H}_2$ sense. In subsequent sections, it will be shown that these performance constraints will have the following quadratic form:
 
 \begin{equation} \label{eq:basic_ineq}
 y^{\star}(x) \gamma^{-1} y(x) - z^{\star}(x)z(x) < 0 
 \end{equation} 
-
 where $y(x)$ and $z(x)$ are complex affine functions of the decision variable $x$ and $(\cdot)^{\star}$ denotes the complex conjugate of the argument. Let $f(x) = z^{\star}(x)z(x)$ with $z(x)$ defined as
-
 $$z(x) = a_0 + a_1x_1 + a_2x_2 + ,\ldots , + a_nx_n$$
-
 where $z:\mathbb{R}^n \rightarrow \mathbb{C}$ and $f:\mathbb{R}^n \rightarrow \mathbb{R}$. A first order Taylor series of $f(x)$ around an operating point $x_0$ can be formulated as follows:
 
 \begin{equation} \label{eq:lin_fx}
 f(x) \approx f(x_0) + D_f(x_0)[x-x_0]
 \end{equation}
-
 where
 $$D_f(x_0) = \left[ \frac{\partial f(x)}{x_1}\Bigr|_{x=x_0}, \frac{\partial f(x)}{x_2}\Bigr|_{x=x_0},\ldots, \frac{\partial f(x)}{x_n}\Bigr|_{x=x_0}\right]$$
 
@@ -209,24 +203,24 @@ y(x) & \phantom{xx} \gamma
 This type of formulation will be used in section \ref{sec:loop_shape} in order to construct a loop-shaping constraint on the closed-loop FRF.
 
 \subsection{Control Performance}
-Since the control methods discussed in this paper are based on the $\mathcal{H}_\infty$ criterion, it is appropriate to first define this criterion in the context of this work. A typical control objective is to design a controller such that the following constraint is satisfied:
+Since the control methods discussed in this paper are based on the $\mathcal{H}_\lambda$ criterion ($\lambda \in \{2,\infty \}$), it is appropriate to first define this criterion in the context of this work. A typical control objective is to design a controller such that the following constraint is satisfied:
 \begin{equation} \label{eq:WS_lt1}
 \| W_q \mathcal{S}_q\| < 1
 \end{equation}
-where $\mathcal{S}_q$ is the $q$-th sensitivity function of interest, and $W_q$ is a stable weighting function such that $\| W_q \mathcal{S}_q\|$ is bounded. The norm considered in (\ref{eq:WS_lt1}) can be either the 2- or infinity-norm. 
+where $\mathcal{S}_q$ is the $q$-th sensitivity function of interest, and $W_q$ is a stable weighting function such that $\| W_q \mathcal{S}_q\|$ is bounded. The norm considered in (\ref{eq:WS_lt1}) can be either the $\mathcal{H}_\infty$ or $\mathcal{H}_2$ norm. 
 
-For SISO systems, and for a stable system $X(s)$, the 2- and infinity-norms are defined as follows:
+For SISO systems, and for a stable system $X(s)$, the $\mathcal{H}_2$ and $\mathcal{H}_\infty$ norms are defined as follows:
 \begin{align*}
 \| X\|_2^2 & := \frac{1}{2\pi} \int_{- \infty}^\infty |X(j\omega)|^2 d\omega \\
 \| X\|_\infty & :=  \sup_{\omega} |X(j\omega)|
 \end{align*}
 It is imperative to note that the boundedness of spectral norm $X$ does not guarantee the stability of $X$. 
 
-A loop-shaping criterion can also be considered as a form of control performance. If $T$ is the closed-loop FRF and $T_d$ is the desired FRF, then one can consider minimizing $(T-T_d)$ in either the 2- or infinity-norm sense in order to shape $T$.  The next section will discuss how an optimization problem can be formulated for this type of control methodology.
+A loop-shaping criterion can also be considered as a form of control performance. If $T$ is the closed-loop FRF and $T_d$ is the desired FRF, then one can consider minimizing $(T-T_d)$ in either the $\mathcal{H}_2$ or $\mathcal{H}_\infty$ sense in order to shape $T$.  The next section will discuss how an optimization problem can be formulated for this type of control methodology.
 
 \subsection{Loop-Shaping Design}
 \label{sec:loop_shape}
-As asserted in section \ref{sec:system}, the objective of this control problem is to shape the FRF of $T(k)$. Suppose that a desired loop-shape is specified as $T_d$; the objective is to design gains in $k$ such that the closed-loop system $T(k)$ coincides with $T_d$ in the $\mathcal{H}_\infty$ or $\mathcal{H}_2$ sense. In the $\mathcal{H}_\infty$ sense, the objective is to minimize $ \|T(k) - T_d \|_\infty$; an equivalent representation of this objective is to minimize $\gamma$ such that $ \|T(k) - T_d \|_\infty < \gamma$. This criterion is satisfied if the the following optimization problem is considered:
+As asserted in section \ref{sec:system}, the objective of this control problem is to shape the FRF of $T(k)$. Suppose that a desired loop-shape is specified as $T_d$; the objective is to design the controllers in $k$ such that the closed-loop system $T(k)$ coincides with $T_d$ in the $\mathcal{H}_\infty$ or $\mathcal{H}_2$ sense. In the $\mathcal{H}_\infty$ sense, the objective is to minimize $ \|T(k) - T_d \|_\infty$; an equivalent representation of this objective is to minimize $\gamma$ such that $ \|T(k) - T_d \|_\infty < \gamma$. This criterion is satisfied if the the following optimization problem is considered:
  
  \begin{equation} \label{eq:min_loopshape}
 \begin{aligned}
@@ -283,13 +277,13 @@ Then, as was shown in (\ref{eq:min_loopshape})-(\ref{eq:loop_shape_LMI_inf}) for
 
 \begin{remark}
 \textit{Note that the choice of the initializing gains in $k_0$ may affect the stability of the closed-loop system (for either the optimization problems concerning the $\mathcal{H}_\infty$ or $\mathcal{H}_2$ norms). The next section will discuss how to select these gains in order to ensure stability. \\ 
-Additionally, note that these optimization problems are considering the gains for $C_m(k)$; however, once an optimal solution is obtained for the gains in $k$, then the definitions in (\ref{eq:new_var}) can be used to revert back to the original gains (i.e., $k_{p_1}$ and $k_{p_2}$.)}
+Additionally, note that these optimization problems are considering the gains for $C_m(k)$; however, once an optimal solution is obtained for the controllers in $k$, then the definitions in (\ref{eq:new_var}) can be used to revert back to the original gains (i.e., $k_{p_1}$ and $k_{p_2}$.)}
 \end{remark}
 
 \subsection{Stability Analysis}
 The loop-shaping constraints developed in the previous section do not guarantee the closed-loop stability of the closed-loop system. Setting a desired FRF to shape a closed-loop FRF is analogous to bounding the closed-loop FRF; it can be shown that unstable systems can still possess bounded FRF's. 
 
-The initializing gains in $k_0$ play an important role in guaranteeing the stability of the closed-loop system. By using the Nyquist criterion for continuous-time systems, the stability of the closed-loop system can be ensured if certain conditions are met for these initializing gains. Let us first recall the Nyquist stability criterion with the following Lemma:
+The initializing controllers in $k_0$ play an important role in guaranteeing the stability of the closed-loop system. By using the Nyquist criterion for continuous-time systems, the stability of the closed-loop system can be ensured if certain conditions are met for these initializing gains. Let us first recall the Nyquist stability criterion with the following Lemma:
 \begin{lemma}
 A closed-loop system with a plant $G(s)$ and a controller $C(s)$ in a unity-feedback structure is stable if and only if the Nyquist plot of $1+G(s)C(s)$
 \begin{itemize}
@@ -309,7 +303,7 @@ Let \emph{wno}$\{ A(s)\}$ refer to the winding number; in the counterclockwise s
 \end{align}
 \end{definition}
 
-The open-loop FRF from the system in Fig.~\ref{fig:damping_loop} is given as $$L(k) = G_d[H_1(k)+H_2(k)+C_m(k)].$$ Let $F(k) = H_1(k)+H_2(k)+C_m(k)$ such that $L(k) = G_dF(k)$; by the Nyquist stability criterion, the closed-loop system is stable if and only if $1+G_dF$ makes $n_{G_d}+n_F$ counter-clockwise encirclements of the origin (where $n_{G_d}$ and $n_F$ are, respectively, the number of RHP poles of $G_d$ and $F$). The Nyquist plot of $1+G_dF$ must also not pass through the origin.
+The open-loop FRF of the system $T(k)$ in Fig.~\ref{fig:damping_loop} is given as $$L(k) = G_d[H_1(k)+H_2(k)+C_m(k)].$$ Let $F(k) = H_1(k)+H_2(k)+C_m(k)$ such that $L(k) = G_dF(k)$; by the Nyquist stability criterion, the closed-loop system is stable if and only if $1+G_dF$ makes $n_{G_d}+n_F$ counter-clockwise encirclements of the origin (where $n_{G_d}$ and $n_F$ are, respectively, the number of RHP poles of $G_d$ and $F$). The Nyquist plot of $1+G_dF$ must also not pass through the origin.
 
 \begin{theorem} \label{Thm1}
 Suppose that $k_i$, $k_u$, $k_{m_1}$, and $k_{m_2}$ are feasible solutions to the following constraint:
@@ -344,7 +338,7 @@ The condition in (\ref{eq:winding_proof3}) implies that if the initializing cont
 {\hfill \ensuremath{\blacksquare}}
 
 \subsection{Initializing Controller}
-For the given structure in Figure.~\ref{fig:damping_loop} , it remains to show how to select the initial stabilizing controllers in order to guarantee the stability of the closed-loop system. From the control structure of the power converter control system, it can be observed that if all the gains in Figure.~\ref{fig:damping_loop} are set to zero, then the system will be in open-loop. However, since $G_d \in \mathscr{S}$, then selecting $k_0 = 0$ will guarentee the stability of the closed-loop system. 
+For the given structure in Figure.~\ref{fig:damping_loop}, it remains to show how to select the initial stabilizing controllers in order to guarantee the stability of the closed-loop system. From the control structure of the power converter control system, it can be observed that if all the gains in Figure.~\ref{fig:damping_loop} are set to zero, then the system will be in open-loop. However, since $G_d \in \mathscr{S}$, then selecting $k_0 = 0$ will guarentee the stability of the closed-loop system. 
 
 If the initializing controllers are selected such that the performance with these controllers is far from the desired performance, then it is possible that either the optimization problem yields no feasible solution, or that the solver runs into numerical problems (which leads to infeasible solutions). One method to resolve this problem is to apply relaxation techniques where a relaxed optimization problem is solved; the solution to the relaxed problem is then used as the initializing controllers for the non-relaxed problem. 
 
@@ -354,12 +348,12 @@ All of the optimization problems considered in section \ref{sec:loop_shape} are 
 
 \section{Case Study}
 \label{sec:case}
-The focus of this case study will be on the SATURN power converter, which incorporates the control methodology shown in Figure.~\ref{fig:damping_loop} and uses the filter shown in Figure.~\ref{fig:circuit}. The SATURN converter is used in the Large Hardron Collider, in injector machines, in experimental areas to power warm magnets, and for DC or pulsed applications. In this power converter, a $18\:kV/50\:Hz$ transformer is used with a diode rectifier and a DC-Link filter for the AC/DC conversion. An IGBT bridge (4 quadrant operation) is then used for a DC/DC conversion, and the output of this bridge is then fed into the filter (i.e, $v_i$ in Fig.~\ref{fig:circuit}). For this application, two identical modules are assembled in series (which doubles the output voltage) where the equivalent switching frequency of this bridge is $5 \: kHz$. A schematic of the SATURN modules are shown in Fig.~ \ref{fig:schematic}. A complete assembly of the SATURN power converter is shown in Fig.~\ref{fig:saturn_pc} while the load (i.e., the $RL$ circuit representing the magnet) is shown in Fig.~\ref{fig:load}.
+The focus of this case study will be on the SATURN power converter, which incorporates the control methodology shown in Figure.~\ref{fig:damping_loop} and uses the filter shown in Figure.~\ref{fig:circuit}. The SATURN converter is used in the Large Hardron Collider, in injector machines, in experimental areas to power warm magnets, and for DC or pulsed applications. In this power converter, a $18\:kV/50\:Hz$ transformer is used with a diode rectifier and a DC-Link filter for the AC/DC conversion. An IGBT bridge (4 quadrant operation) is then used for a DC/DC conversion, and the output of this bridge is then fed into the filter (i.e, $v_i$ in Fig.~\ref{fig:circuit}). For this application, two identical modules are assembled in series (which doubles the output voltage) where the equivalent switching frequency of this bridge is $5 \: kHz$. A schematic of the SATURN modules are shown in Fig.~ \ref{fig:schematic}. A complete assembly of the SATURN power converter is shown in Fig.~\ref{fig:saturn_pc} while the load (i.e., the magnet) is shown in Fig.~\ref{fig:load}.
 
 \begin{figure}
 \centering
 \includegraphics[width=\columnwidth]{../pics/schematic}
-\caption{Schematic of the SATURN modules set in series.}
+\caption{Schematic of the SATURN modules assembled in series.}
 \label{fig:schematic}
 \end{figure} 
 
@@ -378,7 +372,7 @@ The focus of this case study will be on the SATURN power converter, which incorp
 \end{figure} 
 
 \subsection{Frequency Response Measurement}
-Since the proposed method uses a data-driven methodology with frequency-domain data, the frequency response of each subsystem within the power converter control system must be obtained. In other words, we must obtain the frequency responses of $G_d$, $H$, $P_1$, and $P_2$. The signals that are accessible for the measurements are the inputs to the capacitor banks ($U_{dc}$ in Fig.~\ref{fig:schematic}), and the outputs of the sensors $P_1$ and $P_2$. Therefore, when all of the controller gains are set to zero, we are able to obtain the frequency responses of $G_dHP_1$ and $G_dP_2$. However, note that $G_d$ appears independently of $P_2$ in (\ref{eq:Tclp}) and (\ref{eq:Tcl}); since $P_1$ and $P_2$ are sensors with very high bandwidths relative to $G_d$ (approximately $10 \: kHz$), then $G_d \approx G_dP_2$  at frequencies less than $1 \: kHz$. 
+Since the proposed method uses a data-driven methodology with frequency-domain data, the FRF of each subsystem within the power converter control system must be obtained. In other words, we must obtain the FRF of $G_d$, $H$, $P_1$, and $P_2$. The signals that are accessible for the measurements are the inputs to the capacitor banks ($U_{dc}$ in Fig.~\ref{fig:schematic}, which is approximately equal to $v_r$ in Fig.~\ref{fig:damping_loop}), and the outputs of the sensors $P_1$ and $P_2$. Therefore, when all of the controller gains are set to zero, we are able to obtain the frequency responses of $G_dHP_1$ and $G_dP_2$. However, note that $G_d$ appears independently of $P_2$ in (\ref{eq:Tclp}) and (\ref{eq:Tcl}); since $P_1$ and $P_2$ are sensors with very high bandwidths relative to $G_d$ (approximately $10 \: kHz$), then $G_d \approx G_dP_2$  at frequencies less than $1 \: kHz$. 
 
 The frequency response of the subsystems were obtained with a transfer function analyzer (Powertek GP102) which implements a sine-sweep method that recovers the gain and phase of a system at discrete frequency points. The appropriate scaling factors were taken into account for the measurements (due to the series connection of the SATURN modules) in order to coincide with the structure used in Fig.~\ref{fig:damping_loop}. The frequency responses of $G_dP_2$ and $G_dHP_1$ are shown in Fig.~\ref{fig:G} and Fig.~\ref{fig:GHP1}, respectively.
 
@@ -407,7 +401,7 @@ where $\zeta$ is the damping factor and
 \end{equation*}
 where $f_d$ is the desired closed-loop bandwidth. In other words, $T_d$ is simply a delayed version of the second order process. There is some uncertainty associated with the delay $\tau$; the range of this delay is $\tau \in [0,200]\mu s$ with a nominal value of $100 \mu s$. Therefore, for tracking purposes, $\tau = 100 \mu s$ in $T_d(s)$ can be selected as a viable performance criteria. Note that selecting $\tau$ to be another value within the uncertain range will not significantly impact the response. The critical values in the desired response are $f_d$ and $\zeta$. 
 
-Although the delay in $G_d$ was captured in the frequency response measurement, it is known that there also exists an additional measurement delay $\tau_e$ that was not captured in the identification experiment. This delay occurs after digitization of the analog signals at the outputs of $P_1$ and $P_2$. The value of the delay is uncertain and is known to be in the range of $\tau_e \in [0,30]\mu s$. Therefore, a multi-model design can be considered where the additional delay can be gridded in this range and incorporated into the closed-loop TF's. The grid was established in intervals of $5 \: \mu s$ (i.e., $\tau_{e_i} = [0,5,\ldots30] \mu s$, $i = 1,\ldots,7$).  
+Although the delay in $G_d$ was captured in the frequency response measurement, it is known that there also exists an additional measurement delay $\tau_e$ that was not captured in the identification experiment. This delay occurs after digitization of the analog signals at the outputs of $P_1$ and $P_2$ (when the system is operating in closed-loop mode). The value of the delay is uncertain and is known to be in the range of $\tau_e \in [0,30]\mu s$. Therefore, a multi-model design can be considered where the additional delay can be gridded in this range and incorporated into the closed-loop TF's. The grid was established in intervals of $5 \: \mu s$ (i.e., $\tau_{e_i} = [0,5,\ldots30] \mu s$, $i = 1,\ldots,7$).  
 
 In the $\mathcal{H}_{\infty}$ sense, the optimization problem to consider for this case study is as follows:
  \begin{equation} \label{eq:case_study_opt}
@@ -435,13 +429,13 @@ The constraints in the optimization problem in (\ref{eq:case_study_opt}) and (\r
 
 For comparative purposes, controllers were designed by considering the model of the process.  Since there is uncertainty associated with the delay $\tau$, a multi-model approach can be implemented to ensure that the performance is attained for the uncertain values. Therefore, for the model-based design, the problem in (\ref{eq:case_study_opt}) and (\ref{eq:case_study_opt_2}) was solved by gridding in both $\tau$ and $\tau_e$.
 
-Fig.~\ref{fig:d_loop} shows the closed-loop frequency response of $|T^{\prime}(j\omega)|$ while Fig.~\ref{fig:v_loop} shows the closed-loop frequency response of $|T(j\omega)|$ for the solutions obtained by minimizing both the $\mathcal{H}_{\infty}$ and $\mathcal{H}_2$ norms of the process. From these figures, it can be observed that that model-based design produces the worst performance while the data-driven based design achieves the desired performance for both TF's. The performance achieved by the data-driven method (in both the $\mathcal{H}_{\infty}$ and $\mathcal{H}_2$ minimization cases) are comparable. 
+Fig.~\ref{fig:d_loop} shows the closed-loop frequency response of $|T^{\prime}(j\omega)|$ while Fig.~\ref{fig:v_loop} shows the closed-loop frequency response of $|T(j\omega)|$ for the solutions obtained by minimizing both the $\mathcal{H}_{\infty}$ and $\mathcal{H}_2$ norms of the process. From these figures, it can be observed that the model-based design produces the worst performance while the data-driven based design achieves the desired performance for both $T(j\omega)$ and $T^{\prime}(j\omega)$. The performance achieved by the data-driven method (in both the $\mathcal{H}_{\infty}$ and $\mathcal{H}_2$ minimization cases) are comparable. 
 
 \begin{remark}
 Note that the solutions obtained for the model-based design were nearly identical for both the $\mathcal{H}_2$ and $\mathcal{H}_\infty$ problems. Hence the single result shown for the model-based design in Fig.~\ref{fig:d_loop} and Fig.~\ref{fig:v_loop}. 
 \end{remark}
 
-Table.~\ref{tab:case_study} displays the optimal solutions for all criteria considered in this case study. 
+Table.~\ref{tab:case_study} displays the optimal solutions for all criteria considered in this case study. It can be observed that the optimal solutions $\gamma^*$ obtained with the data-driven method are less than the solutions obtained with the model-based approach. This is due to the fact that the uncertainty in the delay $\tau$ for the model-based design was too conservative. This conservativeness was significantly reduced in the data-driven approach since the delay $\tau$ was captured in the FRF identification experiment. 
 
 \begin{figure}
 \centering
@@ -473,7 +467,7 @@ Table.~\ref{tab:case_study} displays the optimal solutions for all criteria cons
 
 \section{Conclusion}
 \label{sec:conclusion}
-A new data-driven method for computing a controller for the CERN power converter control system that attains $\mathcal{H}_2$ or $\mathcal{H}_{\infty}$ performance has been presented. A frequency-domain approach has been used in order to avoid the problem of unmodeled dynamics associated with parametric models. A non-convex loop-shaping constraint was convexified by linearizing the non-convex function around a stabilizing operating point. This linearization process allowed the use of the Shur Complement Lemma to construct an LMI and solve a convex optimization problem. This method has been applied to a power converter control system which uses a specific controller structure and is used for experimental purposes at CERN. In the case study presented in this paper, it has been shown that the proposed data-driven method offers a systematic optimization-based approach that meets the challenging specifications required for the application. In future work, it would be 
+A new data-driven method for computing a controller for the CERN power converter control system that attains $\mathcal{H}_2$ or $\mathcal{H}_{\infty}$ performance has been presented. A frequency-domain approach has been used in order to avoid the problem of unmodeled dynamics associated with parametric models. A non-convex loop-shaping constraint was convexified by linearizing the non-convex function around a stabilizing operating point. This linearization process allowed the use of the Shur Complement Lemma to construct an LMI and solve a convex optimization problem. This method has been applied to a power converter control system which uses a specific controller structure and is used for experimental purposes at CERN. In the case study presented in this paper, it has been shown that the proposed data-driven method offers a systematic optimization-based approach that meets the challenging specifications required for the application. The experiments have confirmed that the data-driven approach significantly reduces the conservativeness associated with the modeling process. For future work, it will be desired to develop a method that ensures feasibility (given a set of initializing controllers) without applying relaxation techniques. 
 
 
 \bibliography{linear}

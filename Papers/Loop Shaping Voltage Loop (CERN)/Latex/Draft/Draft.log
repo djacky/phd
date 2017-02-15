@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.5)  14 FEB 2017 10:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.5)  15 FEB 2017 09:25
 entering extended mode
 **Draft.tex
 (Draft.tex
@@ -353,7 +353,7 @@ File: ../pics/damping_loop_full.pdf Graphic file (type pdf)
 Package pdftex.def Info: ../pics/damping_loop_full.pdf used on input line 110.
 (pdftex.def)             Requested size: 245.71811pt x 81.11751pt.
  [2 <../pics/circuit_partial_a.pdf> <../pics/damping_loop_full.pdf>] [3] [4]
-Underfull \hbox (badness 2237) in paragraph at lines 342--345
+Underfull \hbox (badness 2237) in paragraph at lines 336--339
 \OT1/ptm/m/n/10 The con-di-tion in (24[]) im-plies that if the ini-tial-iz-ing
  []
 
@@ -361,20 +361,20 @@ Underfull \hbox (badness 2237) in paragraph at lines 342--345
 File: ../pics/schematic.png Graphic file (type png)
 
 <use ../pics/schematic.png>
-Package pdftex.def Info: ../pics/schematic.png used on input line 361.
+Package pdftex.def Info: ../pics/schematic.png used on input line 355.
 (pdftex.def)             Requested size: 245.71811pt x 134.44925pt.
 
 <../pics/Saturn_1.png, id=161, 295.8252pt x 221.1462pt>
 File: ../pics/Saturn_1.png Graphic file (type png)
 
 <use ../pics/Saturn_1.png>
-Package pdftex.def Info: ../pics/Saturn_1.png used on input line 368.
+Package pdftex.def Info: ../pics/Saturn_1.png used on input line 362.
 (pdftex.def)             Requested size: 245.71811pt x 183.69301pt.
 
 <../pics/load.pdf, id=162, 595.68048pt x 794.24028pt>
 File: ../pics/load.pdf Graphic file (type pdf)
  <use ../pics/load.pdf>
-Package pdftex.def Info: ../pics/load.pdf used on input line 375.
+Package pdftex.def Info: ../pics/load.pdf used on input line 369.
 (pdftex.def)             Requested size: 245.71214pt x 227.62122pt.
 
 [5 <../pics/schematic.png> <../pics/Saturn_1.png>]
@@ -386,14 +386,14 @@ Package epstopdf Info: Source file: <../pics/G.eps>
 (epstopdf)                    size: 10843 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/G-eps-converted-to.
 pdf ../pics/G.eps>
-(epstopdf)             \includegraphics on input line 387.
+(epstopdf)             \includegraphics on input line 381.
 Package epstopdf Info: Output file is already uptodate.
 
 <../pics/G-eps-converted-to.pdf, id=169, 1156.32pt x 633.36626pt>
 File: ../pics/G-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../pics/G-eps-converted-to.pdf>
-Package pdftex.def Info: ../pics/G-eps-converted-to.pdf used on input line 387.
+Package pdftex.def Info: ../pics/G-eps-converted-to.pdf used on input line 381.
 
 (pdftex.def)             Requested size: 245.71811pt x 134.58614pt.
 Package epstopdf Info: Source file: <../pics/GHP1.eps>
@@ -404,7 +404,7 @@ Package epstopdf Info: Source file: <../pics/GHP1.eps>
 (epstopdf)                    size: 10953 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/GHP1-eps-converted-
 to.pdf ../pics/GHP1.eps>
-(epstopdf)             \includegraphics on input line 394.
+(epstopdf)             \includegraphics on input line 388.
 Package epstopdf Info: Output file is already uptodate.
 
 <../pics/GHP1-eps-converted-to.pdf, id=170, 1156.32pt x 633.36626pt>
@@ -412,7 +412,7 @@ File: ../pics/GHP1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../pics/GHP1-eps-converted-to.pdf>
 Package pdftex.def Info: ../pics/GHP1-eps-converted-to.pdf used on input line 3
-94.
+88.
 (pdftex.def)             Requested size: 245.71811pt x 134.58614pt.
  [6 <../pics/load.pdf> <../pics/G-eps-converted-to.pdf> <../pics/GHP1-eps-conve
 rted-to.pdf>]
@@ -424,7 +424,7 @@ Package epstopdf Info: Source file: <../pics/d_loop_mag.eps>
 (epstopdf)                    size: 10412 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/d_loop_mag-eps-conv
 erted-to.pdf ../pics/d_loop_mag.eps>
-(epstopdf)             \includegraphics on input line 448.
+(epstopdf)             \includegraphics on input line 442.
 Package epstopdf Info: Output file is already uptodate.
 
 <../pics/d_loop_mag-eps-converted-to.pdf, id=195, 1156.32pt x 667.49374pt>
@@ -432,7 +432,7 @@ File: ../pics/d_loop_mag-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../pics/d_loop_mag-eps-converted-to.pdf>
 Package pdftex.def Info: ../pics/d_loop_mag-eps-converted-to.pdf used on input 
-line 448.
+line 442.
 (pdftex.def)             Requested size: 245.71811pt x 141.838pt.
 Package epstopdf Info: Source file: <../pics/v_loop_mag.eps>
 (epstopdf)                    date: 2017-02-09 10:18:04
@@ -442,7 +442,7 @@ Package epstopdf Info: Source file: <../pics/v_loop_mag.eps>
 (epstopdf)                    size: 10168 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/v_loop_mag-eps-conv
 erted-to.pdf ../pics/v_loop_mag.eps>
-(epstopdf)             \includegraphics on input line 455.
+(epstopdf)             \includegraphics on input line 449.
 Package epstopdf Info: Output file is already uptodate.
 
 <../pics/v_loop_mag-eps-converted-to.pdf, id=196, 1156.32pt x 638.385pt>
@@ -450,15 +450,15 @@ File: ../pics/v_loop_mag-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../pics/v_loop_mag-eps-converted-to.pdf>
 Package pdftex.def Info: ../pics/v_loop_mag-eps-converted-to.pdf used on input 
-line 455.
+line 449.
 (pdftex.def)             Requested size: 245.71811pt x 135.65257pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 460.
+               Default added (so using `tbp') on input line 454.
 
-(Draft.bbl [7 <../pics/d_loop_mag-eps-converted-to.pdf> <../pics/v_loop_mag-eps
--converted-to.pdf>])
+[7 <../pics/d_loop_mag-eps-converted-to.pdf> <../pics/v_loop_mag-eps-converted-
+to.pdf>] (Draft.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -470,43 +470,41 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the US letter (8.5in X 11in) paper size.
 
-[8
-
-] (Draft.aux) ) 
+[8] (Draft.aux) ) 
 Here is how much of TeX's memory you used:
- 3311 strings out of 493673
- 47817 string characters out of 3141521
- 121596 words of memory out of 3000000
- 6579 multiletter control sequences out of 15000+200000
+ 3312 strings out of 493673
+ 47823 string characters out of 3141521
+ 120600 words of memory out of 3000000
+ 6580 multiletter control sequences out of 15000+200000
  48545 words of font info for 115 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 42i,16n,26p,1279b,307s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.e
-nc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb
-><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Pro
-gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (
-x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
-/type1/public/amsfonts/symbols/msbm7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/public/rsfs/rsfs10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times
-/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pf
-b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Draft.pdf (8 pages, 1433187 bytes).
+ 42i,16n,26p,1287b,307s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r
+.enc}<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.p
+fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/symbols/msam10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/symbols/msbm7.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/rsfs/rsfs10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/tim
+es/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Draft.pdf (8 pages, 1434769 bytes).
 PDF statistics:
  301 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

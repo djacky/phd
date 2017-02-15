@@ -94,14 +94,19 @@ A.~Karimi, A.~Nicoletti, and Y.~Zhu, ``Robust ${H}_\infty$ controller design
   using frequency-domain data via convex optimization,'' \emph{available online
   in International Journal of Robust and Nonlinear Control}, 2016.
 
-\bibitem{GB65}
-G.~R. Gonzalez and A.~Brambilla, ``Frequency dependence of the resistance and
-  inductance of solid core magnets,'' \emph{IEEE Transactions on Nuclear
-  Science}, vol.~12, no.~3, pp. 349--353, 1965.
-
 \bibitem{KZ98}
 E.~Keil and B.~Zotter, ``The impedance of layered vacuum chambers,'' in
   \emph{EPAC Stockholm}, 1998.
+
+\bibitem{NW95}
+C.-K. Ng and T.~Weiland, ``Impedance analysis of the {PEP-II} vacuum chamber,''
+  in \emph{Proceedings of the Particle Accelerator Conference}, vol.~5.\hskip
+  1em plus 0.5em minus 0.4em\relax IEEE, 1995, pp. 3061--3063.
+
+\bibitem{NS79}
+G.~Nassibian and F.~Sacherer, ``Methods for measuring transverse coupling
+  impedances in circular accelerators,'' \emph{Nuclear Instruments and
+  Methods}, vol. 159, no.~1, pp. 21--27, 1979.
 
 \bibitem{Lju99}
 L.~Ljung, \emph{System Identification - Theory for the User}, 2nd~ed.\hskip 1em

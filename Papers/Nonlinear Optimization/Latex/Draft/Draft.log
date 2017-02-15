@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.5)  15 FEB 2017 16:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.5)  15 FEB 2017 16:13
 entering extended mode
 **Draft.tex
 (Draft.tex
@@ -425,7 +425,7 @@ Package epstopdf Info: Source file: <../pics/gamma_convergence_F_fixed.eps>
 (epstopdf)                    size: 100998 bytes
 (epstopdf)             Output file: <../pics/gamma_convergence_F_fixed-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2017-02-15 16:09:46
+(epstopdf)                    date: 2017-02-15 16:13:38
 (epstopdf)                    size: 5803 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/gamma_convergence_F
 _fixed-eps-converted-to.pdf ../pics/gamma_convergence_F_fixed.eps>

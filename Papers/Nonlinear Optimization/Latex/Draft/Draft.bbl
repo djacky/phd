@@ -79,10 +79,11 @@ T.~Usami, K.~Yubai, D.~Yashiro, and S.~Komada, ``Multivariable fixed-structural
   Conference on Advanced Mechatronic Systems (ICAMechS)}.\hskip 1em plus 0.5em
   minus 0.4em\relax IEEE, 2016, pp. 218--223.
 
-\bibitem{KK16}
-A.~Karimi and C.~Kammer, ``A data-driven approach to robust control of
-  multivariable systems by convex optimization,'' \emph{arXiv preprint
-  arXiv:1610.08776}, 2016.
+\bibitem{KK16_2}
+C.~Kammer and A.~Karimi, ``Robust distributed averaging frequency control of
+  inverter-based microgrids,'' in \emph{IEEE 55th Conference on Decision and
+  Control (CDC)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2016, pp.
+  4973--4978.
 
 \bibitem{KNZ16}
 A.~Karimi, A.~Nicoletti, and Y.~Zhu, ``Robust ${H}_\infty$ controller design

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.5)  14 FEB 2017 14:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.5)  15 FEB 2017 15:36
 entering extended mode
 **Draft.tex
 (Draft.tex
@@ -425,7 +425,7 @@ Package epstopdf Info: Source file: <../pics/gamma_convergence_F_fixed.eps>
 (epstopdf)                    size: 100998 bytes
 (epstopdf)             Output file: <../pics/gamma_convergence_F_fixed-eps-conv
 erted-to.pdf>
-(epstopdf)                    date: 2017-02-13 15:35:28
+(epstopdf)                    date: 2017-02-15 15:18:57
 (epstopdf)                    size: 5803 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/gamma_convergence_F
 _fixed-eps-converted-to.pdf ../pics/gamma_convergence_F_fixed.eps>
@@ -511,7 +511,7 @@ n input line 503.
 (pdftex.def)             Requested size: 245.71811pt x 134.58614pt.
  (Draft.bbl [7 <../pics/step_multi_convex-eps-converted-to.pdf> <../pics/step_m
 ulti_optimal-eps-converted-to.pdf>]
-Underfull \hbox (badness 2951) in paragraph at lines 121--124
+Underfull \hbox (badness 2951) in paragraph at lines 122--125
 []\OT1/ptm/m/n/8 H. Ak-cay and B. Nin-ness, ``Or-thonor-mal ba-sis func-tions f
 or
  []
@@ -538,12 +538,12 @@ LaTeX Font Warning: Size substitutions with differences
  ) 
 Here is how much of TeX's memory you used:
  3457 strings out of 493673
- 49665 string characters out of 3141521
+ 49667 string characters out of 3141521
  122951 words of memory out of 3000000
  6692 multiletter control sequences out of 15000+200000
  60655 words of font info for 150 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 42i,19n,26p,1639b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,19n,26p,1641b,338s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Progra
@@ -575,7 +575,7 @@ b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (
 x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX
  2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Draft.pdf (8 pages, 650055 bytes).
+Output written on Draft.pdf (8 pages, 649503 bytes).
 PDF statistics:
  226 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.5)  27 FEB 2017 14:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.5)  27 FEB 2017 14:31
 entering extended mode
 **Draft_2.tex
 (Draft_2.tex
@@ -366,13 +366,13 @@ sion: multiple pdfs with page group included in a single page
 >] [4]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 326.
+               Default added (so using `tbp') on input line 329.
 
 <../pics/Saturn_1.png, id=56, 295.8252pt x 221.1462pt>
 File: ../pics/Saturn_1.png Graphic file (type png)
 
 <use ../pics/Saturn_1.png>
-Package pdftex.def Info: ../pics/Saturn_1.png used on input line 345.
+Package pdftex.def Info: ../pics/Saturn_1.png used on input line 348.
 (pdftex.def)             Requested size: 245.71811pt x 183.69301pt.
  [5]
 Package epstopdf Info: Source file: <../pics/G.eps>
@@ -383,14 +383,14 @@ Package epstopdf Info: Source file: <../pics/G.eps>
 (epstopdf)                    size: 10843 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/G-eps-converted-to.
 pdf ../pics/G.eps>
-(epstopdf)             \includegraphics on input line 366.
+(epstopdf)             \includegraphics on input line 369.
 Package epstopdf Info: Output file is already uptodate.
 
 <../pics/G-eps-converted-to.pdf, id=62, 1156.32pt x 633.36626pt>
 File: ../pics/G-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../pics/G-eps-converted-to.pdf>
-Package pdftex.def Info: ../pics/G-eps-converted-to.pdf used on input line 366.
+Package pdftex.def Info: ../pics/G-eps-converted-to.pdf used on input line 369.
 
 (pdftex.def)             Requested size: 245.71811pt x 134.58614pt.
 Package epstopdf Info: Source file: <../pics/GHP1.eps>
@@ -401,7 +401,7 @@ Package epstopdf Info: Source file: <../pics/GHP1.eps>
 (epstopdf)                    size: 10953 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/GHP1-eps-converted-
 to.pdf ../pics/GHP1.eps>
-(epstopdf)             \includegraphics on input line 373.
+(epstopdf)             \includegraphics on input line 376.
 Package epstopdf Info: Output file is already uptodate.
 
 <../pics/GHP1-eps-converted-to.pdf, id=63, 1156.32pt x 633.36626pt>
@@ -409,7 +409,7 @@ File: ../pics/GHP1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../pics/GHP1-eps-converted-to.pdf>
 Package pdftex.def Info: ../pics/GHP1-eps-converted-to.pdf used on input line 3
-73.
+76.
 (pdftex.def)             Requested size: 245.71811pt x 134.58614pt.
  [6 <../pics/Saturn_1.png> <../pics/G-eps-converted-to.pdf> <../pics/GHP1-eps-c
 onverted-to.pdf>]
@@ -421,7 +421,7 @@ Package epstopdf Info: Source file: <../pics/d_loop_mag.eps>
 (epstopdf)                    size: 10412 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/d_loop_mag-eps-conv
 erted-to.pdf ../pics/d_loop_mag.eps>
-(epstopdf)             \includegraphics on input line 427.
+(epstopdf)             \includegraphics on input line 430.
 Package epstopdf Info: Output file is already uptodate.
 
 <../pics/d_loop_mag-eps-converted-to.pdf, id=88, 1156.32pt x 667.49374pt>
@@ -429,7 +429,7 @@ File: ../pics/d_loop_mag-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../pics/d_loop_mag-eps-converted-to.pdf>
 Package pdftex.def Info: ../pics/d_loop_mag-eps-converted-to.pdf used on input 
-line 427.
+line 430.
 (pdftex.def)             Requested size: 245.71811pt x 141.838pt.
 Package epstopdf Info: Source file: <../pics/v_loop_mag.eps>
 (epstopdf)                    date: 2017-02-16 10:49:50
@@ -439,7 +439,7 @@ Package epstopdf Info: Source file: <../pics/v_loop_mag.eps>
 (epstopdf)                    size: 10168 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/v_loop_mag-eps-conv
 erted-to.pdf ../pics/v_loop_mag.eps>
-(epstopdf)             \includegraphics on input line 434.
+(epstopdf)             \includegraphics on input line 437.
 Package epstopdf Info: Output file is already uptodate.
 
 <../pics/v_loop_mag-eps-converted-to.pdf, id=89, 1156.32pt x 638.385pt>
@@ -447,15 +447,19 @@ File: ../pics/v_loop_mag-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../pics/v_loop_mag-eps-converted-to.pdf>
 Package pdftex.def Info: ../pics/v_loop_mag-eps-converted-to.pdf used on input 
-line 434.
+line 437.
 (pdftex.def)             Requested size: 245.71811pt x 135.65257pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 439.
+               Default added (so using `tbp') on input line 442.
 
-[7 <../pics/d_loop_mag-eps-converted-to.pdf> <../pics/v_loop_mag-eps-converted-
-to.pdf>] (Draft_2.bbl)
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <../pics/d_loop_mag-eps-converted-to.pdf> <../pics/v_loop_mag-eps-converted
+-to.pdf>]
+(Draft_2.bbl)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -500,7 +504,7 @@ nts/type1/public/rsfs/rsfs10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
 s/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.p
 fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Prog
 ram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Draft_2.pdf (8 pages, 791625 bytes).
+Output written on Draft_2.pdf (8 pages, 791487 bytes).
 PDF statistics:
  191 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

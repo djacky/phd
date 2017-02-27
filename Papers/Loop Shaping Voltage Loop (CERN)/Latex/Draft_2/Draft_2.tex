@@ -123,14 +123,17 @@ In order to simplify the system framework, let us define the following quantitie
 \begin{aligned}
 k_{m_1} &:= k_{p_1}(1+k_u) ;  &k_{m_2} &:= k_{p_2}(1+k_u)  \\
 H_1(k) &:= k_iP_1H;  &H_2(k) &:= k_uP_2e^{-j\omega \tau_{a}} \\
-G &:= G_0e^{-j\omega\tau}; &C_m(k) &:= k_{m_1}+k_{m_2}\frac{t_se^{-j\omega}}{1-e^{-j\omega}}\\ 
+H_3(k) &:=  P_2C_m(k)e^{-j\omega\tau_{a}}; &G &:= G_0e^{-j\omega\tau} \\ 
 \end{aligned}
 \end{equation}
+\begin{equation*}
+C_m(k) := k_{m_1}+k_{m_2}\frac{t_se^{-j\omega}}{1-e^{-j\omega}}
+\end{equation*}
 where $k = [k_i,k_u,k_{m_1},k_{m_2}]$. Let the FRF from $v_d$ to $v_0$ be denoted as $T^{\prime}(k)$ and the FRF from $v_r$ to $v_0$ be denoted as $T(k)$. These closed-loop FRFs can easily be derived as follows:
 
 \begin{align}
 T^{\prime}(k) &= \frac{G(1+k_u)}{1+G[H_1(k)+H_2(k)]} \label{eq:Tclp}  \\ 
-T(k) &= \frac{G[1+k_u+C_m(k)]}{1+G[H_1(k)+H_2(k)+e^{-\tau_{a}s} P_2C_m(k)]}  \label{eq:Tcl} 
+T(k) &= \frac{G[1+k_u+C_m(k)]}{1+G[H_1(k)+H_2(k)+H_3(k)]}  \label{eq:Tcl} 
 \end{align}
 
 For the remaining theoretical portions of this document, the model reference control will only be shown for $T(k)$, since the same procedures can also be applied to $T^{\prime}(k)$. 
@@ -198,7 +201,7 @@ for all $\omega \in \Omega$. It can be observed that the constraint in (\ref{eq:
 \begin{equation} 
 \begin{aligned}
 w(k) &= G[1+k_u+C_m(k)] \\
-z(k) &= 1+G[H_1(k)+H_2(k)+e^{-j\omega \tau_{a}}P_2C_m(k)]
+z(k) &= 1+G[H_1(k)+H_2(k)+H_3(k)]
 \end{aligned}
 \end{equation}
 where it is evident that $T(k) = w(k)z^{-1}(k)$; then the constraint in (\ref{eq:min_loopshape}) can be written as:
@@ -218,7 +221,7 @@ w(k)-z(k)T_d & \phantom{xx}\gamma
 \end{bmatrix} \succ 0
 \end{aligned}
 \end{equation}
-for all $\omega \in \Omega$, where $$z_0 = 1+G[H_1(k_0) + H_2(k_0)+e^{-j\omega \tau_{a}}P_2C_m(k_0)]$$ and $k_0 =[k_{i,0},k_{u,0},k_{m_1,0},k_{m_2,0}  ]$ are the initializing gains. 
+for all $\omega \in \Omega$, where $$z_0 = 1+G[H_1(k_0) + H_2(k_0)+H_3(k_0)]$$ and $k_0 =[k_{i,0},k_{u,0},k_{m_1,0},k_{m_2,0}  ]$ are the initializing gains. 
 
 In a similar manner, the following convex optimization problem can be considered for minimizing  $ \|T(k)- T_d \|_2^2$, as follows:
 \begin{equation} \label{eq:loop_shape_LMI_2}
@@ -278,7 +281,7 @@ Let \emph{wno}$\{ A(s)\}$ refer to the winding number around the origin, in the 
 \emph{wno}\bigl\{ A(s)\bigr\} &= -\emph{wno}\bigl\{ A^{-1}(s)\bigr\} \label{eq:wno_inv}
 \end{align}
 \end{definition}
-The open-loop FRF of the system $T(k)$ in Fig.~\ref{fig:damping_loop} is given as $$L(k) = G[H_1(k)+H_2(k)+e^{-j\omega \tau_{a}}P_2C_m(k)].$$ Let $F(k) = H_1(k)+H_2(k)+e^{-j\omega \tau_{a}}P_2C_m(k)$ such that $L(k) = GF(k)$; by the Nyquist stability criterion, the closed-loop system is stable if and only if $1+GF$ makes $n_{G}+n_F$ counter-clockwise encirclements of the origin (where $n_{G}$ and $n_F$ are, respectively, the number of right-half plane (RHP) poles of $G$ and $F$). The Nyquist plot of $1+GF$ must also not pass through the origin.
+The open-loop FRF of the system $T(k)$ in Fig.~\ref{fig:damping_loop} is given as $$L(k) = G[H_1(k)+H_2(k)+H_3(k)].$$ Let $F(k) = H_1(k)+H_2(k)+H_3(k)$ such that $L(k) = GF(k)$; by the Nyquist stability criterion, the closed-loop system is stable if and only if $1+GF$ makes $n_{G}+n_F$ counter-clockwise encirclements of the origin (where $n_{G}$ and $n_F$ are, respectively, the number of right-half plane (RHP) poles of $G$ and $F$). The Nyquist plot of $1+GF$ must also not pass through the origin.
 
 \begin{theorem} \label{Thm1}
 Suppose that $k_i$, $k_u$, $k_{m_1}$, and $k_{m_2}$ are feasible solutions to the following constraint:
@@ -290,10 +293,10 @@ z^{\star}(k)z_0+z_0^{\star}z(k) > 0 \qquad
 \end{equation}
 where 
 \begin{align*}
-z(k) &= 1+G[H_1(k)+H_2(k)+e^{-j\omega \tau_{a}}P_2C_m(k)] \\
-z_0 &= 1+G[H_1(k_0)+H_2(k_0)+e^{-j\omega \tau_{a}}P_2C_m(k_0)]
+z(k) &= 1+G[H_1(k)+H_2(k)+H_3(k)] \\
+z_0 &= 1+G[H_1(k_0)+H_2(k_0)+H_3(k_0)]
 \end{align*}
-with $\{G,H_1,H_2,P_2\} \in \mathscr{S}$. Then the closed-loop system $T$ is stable if the parameters in the set $k_0$ are stabilizing initial gains.
+with $\{G,H_1,H_2,H_3\} \in \mathscr{S}$. Then the closed-loop system $T$ is stable if the parameters in the set $k_0$ are stabilizing initial gains.
 \end{theorem}
 
 \textit{Proof:}
@@ -305,7 +308,7 @@ The proof is based on the Nyquist stability criterion and the properties of the 
 &\phantom{=} + {\mbox{wno}} \{ 1+GF(k_0)\} \\
 \end{aligned}
 \end{equation}
-where $F(k_0) = H_1(k_0) + H_2(k_0) + e^{-\tau_{a}s}P_2 C_m(k_0)$. Note that $F(k)$ is strictly proper and $GF(k)$ is strictly proper; therefore, the winding number of $z^{\star}(k)z_0$ can be evaluated over $\Omega$ instead of the $D$-contour. Additionally, the constraint in (\ref{eq:theorem1_cond}) implies that $\Re\{ z^{\star}(k)z_0\} > 0$ (where $\Re\{ \cdot \}$ indicates the real part of the argument), which signifies that the Nyquist plot of $z^{\star}(k)z_0$ will not pass through or encircle the origin. Therefore, $\mbox{wno} \{ z^{\star}(k)z_0\} = 0$; from (\ref{eq:winding_proof}), the following condition can then be realized:
+where $F(k_0) = H_1(k_0) + H_2(k_0) + H_3(k_0)$. Note that $F(k)$ is strictly proper and $GF(k)$ is strictly proper; therefore, the winding number of $z^{\star}(k)z_0$ can be evaluated over $\Omega$ instead of the $D$-contour. Additionally, the constraint in (\ref{eq:theorem1_cond}) implies that $\Re\{ z^{\star}(k)z_0\} > 0$ (where $\Re\{ \cdot \}$ indicates the real part of the argument), which signifies that the Nyquist plot of $z^{\star}(k)z_0$ will not pass through or encircle the origin. Therefore, $\mbox{wno} \{ z^{\star}(k)z_0\} = 0$; from (\ref{eq:winding_proof}), the following condition can then be realized:
 \begin{equation} \label{eq:winding_proof3}
 \mbox{wno} \{ 1+GF(k)\} = {\mbox{wno}} \{ 1+GF(k_0)\}
 \end{equation}

@@ -26,26 +26,10 @@ Z.-S. Hou and Z.~Wang, ``From model-based control to data-driven control:
   Survey, classification and perspective,'' \emph{Information Sciences}, vol.
   235, pp. 3--35, 2013.
 
-\bibitem{BCE12}
-A.~S. Bazanella, L.~Campestrini, and D.~Eckhard, \emph{Data-driven Controller
-  Design: The $H_2$ Approach}.\hskip 1em plus 0.5em minus 0.4em\relax Springer,
-  2012.
-
-\bibitem{HDAV10}
-R.~Hoogendijk, A.~J. {Den Hamer}, G.~Angelis, R.~{van de Molengraft}, and
-  M.~Steinbuch, ``Frequency response data based optimal control using the data
-  based symmetric root locus,'' in \emph{IEEE Int. Conference on Control
-  Applications}, Yokohama, Japan, 2010, pp. 257--262.
-
-\bibitem{KNND13b}
-S.~Khadraoui, H.~Nounou, M.~Nounou, A.~Datta, and S.~Bhattacharyya, ``Robust
-  control design method for uncertain system using a set of measurements,'' in
-  \emph{American Control Conference (ACC), 2013}, 2013, pp. 4325--4330.
-
-\bibitem{KNND13c}
-------, ``A control design method for unknown systems using frequency domain
-  data,'' in \emph{Control Conference (ASCC), 2013 9th Asian}.\hskip 1em plus
-  0.5em minus 0.4em\relax IEEE, 2013, pp. 1--6.
+\bibitem{FK13a}
+S.~Formentin, K.~{Van Heusden}, and A.~Karimi, ``A comparison of model-based
+  and data-driven controller tuning,'' \emph{Int. Journal of Adaptive Control
+  and Signal Processing}, 2013.
 
 \bibitem{KG10}
 A.~Karimi and G.~Galdos, ``Fixed-order {$H_\infty$} controller design for
@@ -79,11 +63,10 @@ T.~Usami, K.~Yubai, D.~Yashiro, and S.~Komada, ``Multivariable fixed-structural
   Conference on Advanced Mechatronic Systems (ICAMechS)}.\hskip 1em plus 0.5em
   minus 0.4em\relax IEEE, 2016, pp. 218--223.
 
-\bibitem{KK16_2}
-C.~Kammer and A.~Karimi, ``Robust distributed averaging frequency control of
-  inverter-based microgrids,'' in \emph{IEEE 55th Conference on Decision and
-  Control (CDC)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2016, pp.
-  4973--4978.
+\bibitem{KK16}
+A.~Karimi and C.~Kammer, ``A data-driven approach to robust control of
+  multivariable systems by convex optimization,'' \emph{to appear in
+  Automatica}, 2016.
 
 \bibitem{KNZ16}
 A.~Karimi, A.~Nicoletti, and Y.~Zhu, ``Robust ${H}_\infty$ controller design
@@ -117,11 +100,6 @@ G.~Galdos, A.~Karimi, and R.~Longchamp, ``${H}_\infty$ controller design for
 G.~Ferreres and C.~Roos, ``Efficient convex design of robust feedforward
   controllers,'' in \emph{44th IEEE Conference on Decision and Control},
   Seville, Spain, December 2005, pp. 6460--6465.
-
-\bibitem{AN99b}
-H.~Akcay and B.~Ninness, ``Orthonormal basis functions for continuous-time
-  systems and $l_p$ convergence,'' \emph{Mathematics of Control, Signals, and
-  Systems}, vol.~12, pp. 295--305, 1999.
 
 \bibitem{Zhe10}
 Z.~Zhen-ping, ``Determination of the admissible parameter set in designing

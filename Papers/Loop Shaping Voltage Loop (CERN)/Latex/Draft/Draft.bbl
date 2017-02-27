@@ -26,42 +26,10 @@ Z.-S. Hou and Z.~Wang, ``From model-based control to data-driven control:
   Survey, classification and perspective,'' \emph{Information Sciences}, vol.
   235, pp. 3--35, 2013.
 
-\bibitem{BCE12}
-A.~S. Bazanella, L.~Campestrini, and D.~Eckhard, \emph{Data-driven Controller
-  Design: The $H_2$ Approach}.\hskip 1em plus 0.5em minus 0.4em\relax Springer,
-  2012.
-
-\bibitem{LLMK11}
-I.~D. Landau, R.~Lozano, M.~M'Saad, and A.~Karimi, \emph{Adaptive Control:
-  Algorithms, Analysis and Applications}.\hskip 1em plus 0.5em minus
-  0.4em\relax London: Springer-Verlag, 2011.
-
-\bibitem{HJ13}
-Z.~Hou and S.~Jin, \emph{Model free adaptive control: theory and
-  applications}.\hskip 1em plus 0.5em minus 0.4em\relax CRC press, 2013.
-
-\bibitem{ST97}
-M.~G. Safonov and T.~C. Tsao, ``The unfalsified control concept and learning,''
-  \emph{IEEE Trans. on Automatic Control}, vol.~42, no.~6, 1997.
-
-\bibitem{Hja02}
-H.~Hjalmarsson, ``Iterative feedback tuning - an overview,'' \emph{Int. Journal
-  of Adaptive Control and Signal Processing}, vol.~16, pp. 373--395, 2002.
-
-\bibitem{KMB02a}
-A.~Karimi, L.~{Mi\v{s}kovi\'c}, and D.~Bonvin, ``Convergence analysis of an
-  iterative correlation-based controller tuning method,'' in \emph{15th IFAC
-  World Congress, Barcelona, Spain}, July 2002.
-
-\bibitem{CLS02}
-M.~C. Campi, A.~Lecchini, and S.~M. Savaresi, ``Virtual reference feedback
-  tuning: A direct method for the design of feedback controllers,''
-  \emph{Automatica}, vol.~38, pp. 1337--1346, 2002.
-
-\bibitem{KVB07}
-A.~Karimi, K.~van Heusden, and D.~Bonvin, ``Non-iterative data-driven
-  controller tuning using the correlation approach,'' in \emph{European Control
-  Conference}, Kos, Greece, 2007, pp. 5189--5195.
+\bibitem{FK13a}
+S.~Formentin, K.~{Van Heusden}, and A.~Karimi, ``A comparison of model-based
+  and data-driven controller tuning,'' \emph{Int. Journal of Adaptive Control
+  and Signal Processing}, 2013.
 
 \bibitem{KNND13b}
 S.~Khadraoui, H.~Nounou, M.~Nounou, A.~Datta, and S.~Bhattacharyya, ``Robust
@@ -78,16 +46,32 @@ A.~Karimi and G.~Galdos, ``Fixed-order {$H_\infty$} controller design for
   nonparametric models by convex optimization,'' \emph{Automatica}, vol.~46,
   no.~8, pp. 1388--1394, 2010.
 
-\bibitem{GKL10b}
-G.~Galdos, A.~Karimi, and R.~Longchamp, ``${H}_\infty$ controller design for
-  spectral {MIMO} models by convex optimization,'' \emph{Journal of Process
-  Control}, vol.~20, no.~10, pp. 1175 -- 1182, 2010.
+\bibitem{SOW10}
+M.~Saeki, M.~Ogawa, and N.~Wada, ``Low-order ${H}_\infty$ controller design on
+  the frequency domain by partial optimization,'' \emph{International Journal
+  of Robust and Nonlinear Control}, vol.~20, no.~3, pp. 323--333, 2010.
 
-\bibitem{NK14}
-A.~Nicoletti and A.~Karimi, ``{$H_\infty$} {S}mith predictor design for
-  time-delayed {MIMO} systems via convex optimization,'' in \emph{2014 IEEE
-  Conference on Control Applications (CCA)}.\hskip 1em plus 0.5em minus
-  0.4em\relax IEEE, 2014, pp. 1418--1424.
+\bibitem{HAB13}
+M.~Hast, K.~J. Astr{\"o}m, B.~Bernhardsson, and S.~Boyd, ``{PID} design by
+  convex-concave optimization,'' in \emph{European Control Conference}, Zurich,
+  Switzerland, 2013, pp. 4460--4465.
+
+\bibitem{UYY16}
+T.~Usami, K.~Yubai, D.~Yashiro, and S.~Komada, ``Multivariable fixed-structural
+  controller design for {$H_\infty$} loop shaping method by iterative {LMI}
+  optimization using frequency response data,'' in \emph{International
+  Conference on Advanced Mechatronic Systems (ICAMechS)}.\hskip 1em plus 0.5em
+  minus 0.4em\relax IEEE, 2016, pp. 218--223.
+
+\bibitem{KK16}
+A.~Karimi and C.~Kammer, ``A data-driven approach to robust control of
+  multivariable systems by convex optimization,'' \emph{to appear in
+  Automatica}, 2016.
+
+\bibitem{BHA16}
+S.~Boyd, M.~Hast, and K.~J. {\AA}str{\"o}m, ``{MIMO PID} tuning via iterated
+  {LMI} restriction,'' \emph{International Journal of Robust and Nonlinear
+  Control}, vol.~26, no.~8, pp. 1718--1731, 2016.
 
 \bibitem{KNZ16}
 A.~Karimi, A.~Nicoletti, and Y.~Zhu, ``Robust ${H}_\infty$ controller design
@@ -108,13 +92,14 @@ G.~Nassibian and F.~Sacherer, ``Methods for measuring transverse coupling
   impedances in circular accelerators,'' \emph{Nuclear Instruments and
   Methods}, vol. 159, no.~1, pp. 21--27, 1979.
 
-\bibitem{Lju99}
-L.~Ljung, \emph{System Identification - Theory for the User}, 2nd~ed.\hskip 1em
-  plus 0.5em minus 0.4em\relax NJ, USA: Prentice Hall, 1999.
-
 \bibitem{BEN09}
 A.~Ben-Tal, L.~El~Ghaoui, and A.~Nemirovski, \emph{Robust optimization}.\hskip
   1em plus 0.5em minus 0.4em\relax Princeton University Press, 2009.
+
+\bibitem{GKL10b}
+G.~Galdos, A.~Karimi, and R.~Longchamp, ``${H}_\infty$ controller design for
+  spectral {MIMO} models by convex optimization,'' \emph{Journal of Process
+  Control}, vol.~20, no.~10, pp. 1175 -- 1182, 2010.
 
 \bibitem{SVBB11}
 P.~Seiler, B.~Vanek, J.~Bokor, and G.~J. Balas, ``Robust {$H_{\infty}$} filter

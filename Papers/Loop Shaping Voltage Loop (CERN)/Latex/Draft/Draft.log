@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.5)  16 FEB 2017 09:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.5)  24 FEB 2017 10:47
 entering extended mode
 **Draft.tex
 (Draft.tex
@@ -339,125 +339,119 @@ eva
 
 
 ]
-<../pics/circuit_partial_a.pdf, id=17, 582.57652pt x 247.12627pt>
-File: ../pics/circuit_partial_a.pdf Graphic file (type pdf)
+<../pics/voltage_loop_schematic_color_coded.pdf, id=17, 963.6pt x 542.025pt>
+File: ../pics/voltage_loop_schematic_color_coded.pdf Graphic file (type pdf)
 
-<use ../pics/circuit_partial_a.pdf>
-Package pdftex.def Info: ../pics/circuit_partial_a.pdf used on input line 101.
-(pdftex.def)             Requested size: 245.71811pt x 104.2335pt.
+<use ../pics/voltage_loop_schematic_color_coded.pdf>
+Package pdftex.def Info: ../pics/voltage_loop_schematic_color_coded.pdf used on
+ input line 105.
+(pdftex.def)             Requested size: 417.72003pt x 234.96844pt.
 
-<../pics/damping_loop_full.pdf, id=18, 488.92183pt x 161.403pt>
-File: ../pics/damping_loop_full.pdf Graphic file (type pdf)
+<../pics/voltage_loop_color_coded.pdf, id=18, 963.6pt x 542.025pt>
+File: ../pics/voltage_loop_color_coded.pdf Graphic file (type pdf)
 
-<use ../pics/damping_loop_full.pdf>
-Package pdftex.def Info: ../pics/damping_loop_full.pdf used on input line 110.
-(pdftex.def)             Requested size: 245.71811pt x 81.11751pt.
+<use ../pics/voltage_loop_color_coded.pdf>
+Package pdftex.def Info: ../pics/voltage_loop_color_coded.pdf used on input lin
+e 116.
+(pdftex.def)             Requested size: 393.15047pt x 221.13995pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 2418) has occurred while \output is active []
 
- [2 <../pics/circuit_partial_a.pdf> <../pics/damping_loop_full.pdf>] [3] [4]
+ [2]
+[3 <../pics/voltage_loop_schematic_color_coded.pdf> <../pics/voltage_loop_color
+_coded.pdf
+
+pdfTeX warning: pdflatex (file ../pics/voltage_loop_color_coded.pdf): PDF inclu
+sion: multiple pdfs with page group included in a single page
+>] [4] [5]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 360.
+               Default added (so using `tbp') on input line 345.
 
-<../pics/schematic.png, id=158, 670.30424pt x 366.77025pt>
-File: ../pics/schematic.png Graphic file (type png)
-
-<use ../pics/schematic.png>
-Package pdftex.def Info: ../pics/schematic.png used on input line 378.
-(pdftex.def)             Requested size: 245.71811pt x 134.44925pt.
-
-<../pics/Saturn_1.png, id=160, 295.8252pt x 221.1462pt>
+<../pics/Saturn_1.png, id=60, 295.8252pt x 221.1462pt>
 File: ../pics/Saturn_1.png Graphic file (type png)
 
 <use ../pics/Saturn_1.png>
-Package pdftex.def Info: ../pics/Saturn_1.png used on input line 385.
+Package pdftex.def Info: ../pics/Saturn_1.png used on input line 363.
 (pdftex.def)             Requested size: 245.71811pt x 183.69301pt.
-
-<../pics/load.pdf, id=161, 595.68048pt x 794.24028pt>
-File: ../pics/load.pdf Graphic file (type pdf)
- <use ../pics/load.pdf>
-Package pdftex.def Info: ../pics/load.pdf used on input line 392.
-(pdftex.def)             Requested size: 245.71214pt x 227.62122pt.
-
-[5]
 Package epstopdf Info: Source file: <../pics/G.eps>
-(epstopdf)                    date: 2017-02-09 15:16:17
+(epstopdf)                    date: 2017-02-16 10:49:50
 (epstopdf)                    size: 205348 bytes
 (epstopdf)             Output file: <../pics/G-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-02-09 15:16:20
+(epstopdf)                    date: 2017-02-16 10:49:50
 (epstopdf)                    size: 10843 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/G-eps-converted-to.
 pdf ../pics/G.eps>
-(epstopdf)             \includegraphics on input line 404.
+(epstopdf)             \includegraphics on input line 384.
 Package epstopdf Info: Output file is already uptodate.
- <../pics/G-eps-converted-to.pdf, id=167, 1156.32pt x 633.36626pt>
+
+<../pics/G-eps-converted-to.pdf, id=62, 1156.32pt x 633.36626pt>
 File: ../pics/G-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../pics/G-eps-converted-to.pdf>
-Package pdftex.def Info: ../pics/G-eps-converted-to.pdf used on input line 404.
+Package pdftex.def Info: ../pics/G-eps-converted-to.pdf used on input line 384.
 
 (pdftex.def)             Requested size: 245.71811pt x 134.58614pt.
 Package epstopdf Info: Source file: <../pics/GHP1.eps>
-(epstopdf)                    date: 2017-02-09 15:17:14
+(epstopdf)                    date: 2017-02-16 10:49:50
 (epstopdf)                    size: 205434 bytes
 (epstopdf)             Output file: <../pics/GHP1-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-02-09 15:17:18
+(epstopdf)                    date: 2017-02-16 10:49:50
 (epstopdf)                    size: 10953 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/GHP1-eps-converted-
 to.pdf ../pics/GHP1.eps>
-(epstopdf)             \includegraphics on input line 411.
+(epstopdf)             \includegraphics on input line 391.
 Package epstopdf Info: Output file is already uptodate.
 
-<../pics/GHP1-eps-converted-to.pdf, id=168, 1156.32pt x 633.36626pt>
+<../pics/GHP1-eps-converted-to.pdf, id=63, 1156.32pt x 633.36626pt>
 File: ../pics/GHP1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../pics/GHP1-eps-converted-to.pdf>
-Package pdftex.def Info: ../pics/GHP1-eps-converted-to.pdf used on input line 4
-11.
+Package pdftex.def Info: ../pics/GHP1-eps-converted-to.pdf used on input line 3
+91.
 (pdftex.def)             Requested size: 245.71811pt x 134.58614pt.
- [6 <../pics/schematic.png> <../pics/Saturn_1.png> <../pics/load.pdf> <../pics/
-G-eps-converted-to.pdf> <../pics/GHP1-eps-converted-to.pdf>]
+ [6 <../pics/Saturn_1.png> <../pics/G-eps-converted-to.pdf> <../pics/GHP1-eps-c
+onverted-to.pdf>]
 Package epstopdf Info: Source file: <../pics/d_loop_mag.eps>
-(epstopdf)                    date: 2017-02-09 10:18:20
+(epstopdf)                    date: 2017-02-16 10:49:50
 (epstopdf)                    size: 195057 bytes
 (epstopdf)             Output file: <../pics/d_loop_mag-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-02-09 10:27:00
+(epstopdf)                    date: 2017-02-16 10:49:50
 (epstopdf)                    size: 10412 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/d_loop_mag-eps-conv
 erted-to.pdf ../pics/d_loop_mag.eps>
-(epstopdf)             \includegraphics on input line 465.
+(epstopdf)             \includegraphics on input line 445.
 Package epstopdf Info: Output file is already uptodate.
 
-<../pics/d_loop_mag-eps-converted-to.pdf, id=195, 1156.32pt x 667.49374pt>
+<../pics/d_loop_mag-eps-converted-to.pdf, id=88, 1156.32pt x 667.49374pt>
 File: ../pics/d_loop_mag-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../pics/d_loop_mag-eps-converted-to.pdf>
 Package pdftex.def Info: ../pics/d_loop_mag-eps-converted-to.pdf used on input 
-line 465.
+line 445.
 (pdftex.def)             Requested size: 245.71811pt x 141.838pt.
 Package epstopdf Info: Source file: <../pics/v_loop_mag.eps>
-(epstopdf)                    date: 2017-02-09 10:18:04
+(epstopdf)                    date: 2017-02-16 10:49:50
 (epstopdf)                    size: 193151 bytes
 (epstopdf)             Output file: <../pics/v_loop_mag-eps-converted-to.pdf>
-(epstopdf)                    date: 2017-02-09 10:27:00
+(epstopdf)                    date: 2017-02-16 10:49:50
 (epstopdf)                    size: 10168 bytes
 (epstopdf)             Command: <epstopdf --outfile=../pics/v_loop_mag-eps-conv
 erted-to.pdf ../pics/v_loop_mag.eps>
-(epstopdf)             \includegraphics on input line 472.
+(epstopdf)             \includegraphics on input line 452.
 Package epstopdf Info: Output file is already uptodate.
 
-<../pics/v_loop_mag-eps-converted-to.pdf, id=196, 1156.32pt x 638.385pt>
+<../pics/v_loop_mag-eps-converted-to.pdf, id=89, 1156.32pt x 638.385pt>
 File: ../pics/v_loop_mag-eps-converted-to.pdf Graphic file (type pdf)
 
 <use ../pics/v_loop_mag-eps-converted-to.pdf>
 Package pdftex.def Info: ../pics/v_loop_mag-eps-converted-to.pdf used on input 
-line 472.
+line 452.
 (pdftex.def)             Requested size: 245.71811pt x 135.65257pt.
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 477.
+               Default added (so using `tbp') on input line 457.
 
 [7 <../pics/d_loop_mag-eps-converted-to.pdf>] (Draft.bbl)
 
@@ -473,13 +467,13 @@ Before submitting the final camera ready copy, remember to:
 
 [8 <../pics/v_loop_mag-eps-converted-to.pdf>] (Draft.aux) ) 
 Here is how much of TeX's memory you used:
- 3314 strings out of 493673
- 47841 string characters out of 3141521
- 119613 words of memory out of 3000000
- 6582 multiletter control sequences out of 15000+200000
+ 3296 strings out of 493673
+ 47679 string characters out of 3141521
+ 119566 words of memory out of 3000000
+ 6566 multiletter control sequences out of 15000+200000
  48545 words of font info for 115 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 42i,16n,26p,1413b,307s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 42i,16n,26p,1783b,307s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x
 86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKTeX 2
 .9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKTeX 2.9
@@ -506,9 +500,9 @@ Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)
 /MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.
 9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on Draft.pdf (8 pages, 1436128 bytes).
+Output written on Draft.pdf (8 pages, 796401 bytes).
 PDF statistics:
- 301 PDF objects out of 1000 (max. 8388607)
+ 195 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
